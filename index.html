@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bu Gece Başucundayım | 9 Kasım Saat 11:00</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fraunces (Editorial Luxury Serif), Newsreader (Storybook Italic), Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Fraunces"', 'Georgia', 'serif'],
+                        serif: ['"Newsreader"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'spin-vinyl': 'spinVinyl 14s linear infinite',
+                        'float-gentle': 'floatGentle 6s ease-in-out infinite',
+                        'flame-flicker': 'flameFlicker 2.6s ease-in-out infinite',
+                        'heartbeat-slow': 'heartbeatSlow 1.08s ease-in-out infinite',
+                        'steam-rise': 'steamRise 4s ease-out infinite',
+                    },
+                    keyframes: {
+                        spinVinyl: {
+                            '0%': { transform: 'rotate(0deg)' },
+                            '100%': { transform: 'rotate(360deg)' },
+                        },
+                        floatGentle: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-7px)' },
+                        },
+                        flameFlicker: {
+                            '0%, 100%': { transform: 'scaleY(1) scaleX(1) rotate(-1deg)', opacity: 0.95 },
+                            '25%': { transform: 'scaleY(1.08) scaleX(0.95) rotate(1.5deg)', opacity: 1 },
+                            '50%': { transform: 'scaleY(0.94) scaleX(1.04) rotate(-0.5deg)', opacity: 0.88 },
+                            '75%': { transform: 'scaleY(1.05) scaleX(0.97) rotate(1deg)', opacity: 0.98 },
+                        },
+                        heartbeatSlow: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '14%': { transform: 'scale(1.10)' },
+                            '28%': { transform: 'scale(1)' },
+                            '42%': { transform: 'scale(1.15)' },
+                            '70%': { transform: 'scale(1)' },
+                        },
+                        steamRise: {
+                            '0%': { transform: 'translateY(0) scaleX(1)', opacity: 0 },
+                            '40%': { opacity: 0.55 },
+                            '100%': { transform: 'translateY(-45px) scaleX(1.4)', opacity: 0 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ==========================================================
+           3 DISTINCT LUXURY THEME PALETTES (Velvet Plum, Terracotta Cashmere, Cosmic Lavender)
+           ========================================================== */
+        :root, [data-theme="velvet"] {
+            --bg-deep: #120B16;
+            --bg-surface: #1E1324;
+            --bg-elevated: #2A1B33;
+            --bg-glass: rgba(33, 20, 41, 0.76);
+            --text-primary: #FBF4EB;
+            --text-secondary: #E4D0C8;
+            --text-muted: #B2969E;
+            --accent-primary: #E5987F;    /* Warm Rose-Terracotta */
+            --accent-secondary: #F3CE93;  /* Candlelight Gold */
+            --accent-soft: rgba(229, 152, 127, 0.18);
+            --border-subtle: rgba(243, 206, 147, 0.20);
+            --border-glow: rgba(229, 152, 127, 0.45);
+            --orb-1: rgba(181, 89, 110, 0.22);
+            --orb-2: rgba(243, 206, 147, 0.14);
+            --orb-3: rgba(112, 54, 98, 0.25);
+        }
+
+        [data-theme="terracotta"] {
+            --bg-deep: #17100E;
+            --bg-surface: #251915;
+            --bg-elevated: #35231D;
+            --bg-glass: rgba(40, 26, 22, 0.78);
+            --text-primary: #FDF6EE;
+            --text-secondary: #EBD5C3;
+            --text-muted: #BA9C88;
+            --accent-primary: #E08A63;    /* Warm Terracotta Cinnamon */
+            --accent-secondary: #F4C983;  /* Honey Amber */
+            --accent-soft: rgba(224, 138, 99, 0.20);
+            --border-subtle: rgba(244, 201, 131, 0.22);
+            --border-glow: rgba(224, 138, 99, 0.48);
+            --orb-1: rgba(204, 102, 65, 0.22);
+            --orb-2: rgba(244, 201, 131, 0.16);
+            --orb-3: rgba(135, 62, 45, 0.24);
+        }
+
+        [data-theme="lavender"] {
+            --bg-deep: #0E101D;
+            --bg-surface: #171A2E;
+            --bg-elevated: #212642;
+            --bg-glass: rgba(24, 28, 49, 0.78);
+            --text-primary: #F6F3FC;
+            --text-secondary: #D7D0E8;
+            --text-muted: #9A93B5;
+            --accent-primary: #C4A7E7;    /* Dusty Iris Lavender */
+            --accent-secondary: #F6C177;  /* Starlight Gold */
+            --accent-soft: rgba(196, 167, 231, 0.18);
+            --border-subtle: rgba(196, 167, 231, 0.22);
+            --border-glow: rgba(246, 193, 119, 0.42);
+            --orb-1: rgba(144, 115, 198, 0.22);
+            --orb-2: rgba(246, 193, 119, 0.14);
+            --orb-3: rgba(75, 82, 145, 0.24);
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: background-color 0.8s ease, color 0.6s ease;
+        }
+
+        /* Subtle Tactile Silk & Parchment Grain Overlay */
+        .silk-grain {
+            background-image: radial-gradient(rgba(255, 245, 235, 0.035) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        /* Custom Luxury Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-elevated);
+            border-radius: 9999px;
+            border: 1px solid var(--border-subtle);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+
+        /* Velvet & Candlelight Architectural Surfaces */
+        .velvet-panel {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 250, 240, 0.09);
+            transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .velvet-panel:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65), 0 0 40px var(--accent-soft);
+        }
+
+        /* Arched Window & Alcove Frame */
+        .arch-frame {
+            border-radius: 180px 180px 28px 28px;
+            border: 1.5px solid var(--border-subtle);
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7), 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Vinyl Grooves Effect */
+        .vinyl-disc {
+            background:
+                radial-gradient(circle at center, #2A1B33 0%, #2A1B33 16%, #120B16 17%, #18111D 28%, #0E0911 29%, #1B1320 42%, #0D0810 43%, #1A121F 58%, #0B070E 59%, #19111E 75%, #09050B 76%, #160F1A 92%, #070409 100%);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75), inset 0 0 25px rgba(255, 255, 255, 0.08);
+        }
+        .vinyl-paused {
+            animation-play-state: paused !important;
+        }
+
+        /* Custom Range Sliders */
+        input[type=range].luxury-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            background: rgba(255, 245, 235, 0.10);
+            height: 6px;
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type=range].luxury-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            cursor: pointer;
+            box-shadow: 0 0 14px var(--accent-primary);
+            transition: transform 0.2s ease;
+        }
+        input[type=range].luxury-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.22);
+        }
+
+        /* Ambient Orbs */
+        .ambient-orb {
+            position: fixed;
+            border-radius: 9999px;
+            filter: blur(130px);
+            pointer-events: none;
+            z-index: 0;
+            transition: all 1.2s ease;
+        }
+
+        /* Wax Seal Button */
+        .wax-seal {
+            background: radial-gradient(circle at 35% 35%, #E5987F, #9E3B42 65%, #5E1B22 100%);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55), inset 0 2px 4px rgba(255, 230, 210, 0.35);
+        }
+
+        /* Floating Particles */
+        .floating-spark {
+            position: fixed;
+            pointer-events: none;
+            z-index: 70;
+            animation: sparkRise 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes sparkRise {
+            0% { opacity: 1; transform: translateY(0) scale(0.7) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(-150px) scale(1.35) rotate(14deg); }
+        }
+
+        /* Hug Ripple Ring */
+        .embrace-ring {
+            position: absolute;
+            border-radius: 9999px;
+            border: 2px solid var(--accent-secondary);
+            animation: embracePulse 2.3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            pointer-events: none;
+        }
+        @keyframes embracePulse {
+            0% { transform: scale(0.85); opacity: 0.85; }
+            100% { transform: scale(2.45); opacity: 0; }
+        }
+
+        /* Cashmere Blanket Vignette */
+        #cashmereBlanketOverlay {
+            box-shadow: inset 0 0 160px 55px rgba(229, 152, 127, 0.25), inset 0 0 70px 20px rgba(243, 206, 147, 0.18);
+        }
+    </style>
+</head>
+<body data-theme="velvet" class="font-sans antialiased relative min-h-screen silk-grain selection:bg-[#E5987F]/30 selection:text-white">
+
+    <!-- ==========================================================
+         WELCOME CURTAIN (Ensures High-Resolution Audio Engine Starts Smoothly)
+         ========================================================== -->
+    <div id="welcomeCurtain" class="fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-1000"
+         style="background: radial-gradient(circle at center, #26162E 0%, #110A15 100%);">
+        <div class="max-w-lg w-full velvet-panel rounded-[2.5rem] p-8 sm:p-12 text-center relative overflow-hidden border border-[#F3CE93]/30">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center border border-[#F3CE93]/40 bg-[#E5987F]/15 shadow-[0_0_40px_rgba(243,206,147,0.25)]">
+                <i data-lucide="Flame" class="w-8 h-8 text-[#F3CE93] animate-pulse"></i>
+            </div>
+            <span class="text-xs uppercase tracking-[0.25em] text-[#F3CE93]/90 block mb-2">8 Kasım Gece Nöbeti • 9 Kasım Saat 11:00</span>
+            <h1 class="font-display text-3xl sm:text-4xl text-[#FBF4EB] font-light leading-snug">
+                Bu Gece Başucundaki <br>
+                <span class="italic text-[#E5987F]">Sıcak Sığınağın</span>
+            </h1>
+            <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/90 mt-4 leading-relaxed">
+                Bedeninin dinlenmeye, gevşemeye ve sessizce sarmalanmaya ihtiyacı olduğunu biliyorum. 
+                Senin için gerçek piyano, akustik gitar, çello ve arp besteleriyle dolu, başucunda elini tuttuğumu hissettirecek bir gece köşkü hazırladım.
+            </p>
+            <div class="mt-8 space-y-3">
+                <button onclick="enterSanctuaryWithMusic()" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#E5987F] via-[#F3CE93] to-[#E5987F] text-[#160F18] font-semibold text-sm sm:text-base shadow-[0_10px_35px_rgba(229,152,127,0.4)] hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-2.5">
+                    <i data-lucide="disc-3" class="w-5 h-5"></i>
+                    <span>Mumları Yak & Gece Müziğiyle İçeri Gir</span>
+                </button>
+                <button onclick="enterSanctuarySilent()" class="w-full py-2.5 text-xs text-[#E4D0C8]/75 hover:text-white transition">
+                    Şimdilik Sessiz Gir (Müziği İçeride İstediğin An Açabilirsin)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Ambient Stardust & Warm Candle Embers Canvas -->
+    <canvas id="sanctuarySkyCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+    <!-- Sleep Dimmer Overlay -->
+    <div id="sleepDimmerOverlay" class="fixed inset-0 bg-black pointer-events-none z-50 transition-opacity duration-1000" style="opacity: 0;"></div>
+
+    <!-- Cashmere Blanket Warm Vignette -->
+    <div id="cashmereBlanketOverlay" class="fixed inset-0 pointer-events-none z-30 opacity-0 transition-opacity duration-1000"></div>
+
+    <!-- Embrace Glow Overlay -->
+    <div id="embraceScreenOverlay" class="fixed inset-0 pointer-events-none z-40 opacity-0 transition-opacity duration-700"
+         style="background: radial-gradient(circle at center, rgba(243,206,147,0.22) 0%, rgba(229,152,127,0.16) 45%, rgba(18,11,22,0) 80%);">
+    </div>
+
+    <!-- Dynamic Ambient Glow Orbs -->
+    <div id="orb1" class="ambient-orb w-[28rem] h-[28rem] top-[-6%] left-[-6%]" style="background: var(--orb-1);"></div>
+    <div id="orb2" class="ambient-orb w-[34rem] h-[34rem] bottom-[5%] right-[-10%]" style="background: var(--orb-2);"></div>
+    <div id="orb3" class="ambient-orb w-96 h-96 top-[40%] left-[25%]" style="background: var(--orb-3);"></div>
+
+    <!-- ==========================================================
+         TOP ARCHITECTURAL NAVIGATION & 3-WORLD THEME SWITCHER
+         ========================================================== -->
+    <header class="sticky top-0 z-40 backdrop-blur-2xl bg-[#120B16]/80 border-b border-[#F3CE93]/15 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+            <!-- Brand -->
+            <a href="#pencere" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#E5987F]/30 to-[#F3CE93]/20 border border-[#F3CE93]/40 flex items-center justify-center shadow-lg group-hover:scale-105 transition">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-[#F3CE93]"></i>
+                </div>
+                <div>
+                    <span class="font-display italic text-lg sm:text-xl tracking-wide text-[#FBF4EB] block leading-none">Başucundaki Gece Köşkü</span>
+                    <span class="text-[11px] text-[#E4D0C8]/75 tracking-widest uppercase">9 Kasım 2026 • Saat 11:00</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden xl:flex items-center gap-1 text-xs text-[#E4D0C8]/90">
+                <a href="#pikap-studyosu" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition flex items-center gap-1 text-[#F3CE93] font-medium">
+                    <i data-lucide="disc-3" class="w-3.5 h-3.5"></i> Gece Plakları & Sesler
+                </a>
+                <a href="#pencere" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">Başucu Penceren</a>
+                <a href="#bitki-cayi" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">Sıcak Çay Demle</a>
+                <a href="#kristal-sera" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">Gece Serası</a>
+                <a href="#ipek-tuval" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">İpek Dokunuş</a>
+                <a href="#zarflar" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">12 Mühürlü Mektup</a>
+                <a href="#mumlar-masal" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition">Mumlar & Masal</a>
+            </nav>
+
+            <!-- Theme Switcher & Quick Play Controls -->
+            <div class="flex items-center gap-2">
+                <!-- 3 Theme Buttons -->
+                <div class="flex items-center bg-black/35 p-1 rounded-full border border-[#F3CE93]/20">
+                    <button onclick="switchTheme('velvet', this)" class="theme-pill px-2.5 py-1 rounded-full text-[11px] bg-[#E5987F] text-[#120B16] font-semibold transition" title="Mürdüm Kadife & Mum Işığı">
+                        Kadife
+                    </button>
+                    <button onclick="switchTheme('terracotta', this)" class="theme-pill px-2.5 py-1 rounded-full text-[11px] text-[#E4D0C8] hover:text-white transition" title="Sıcak Terracotta & Kaşmir">
+                        Kaşmir
+                    </button>
+                    <button onclick="switchTheme('lavender', this)" class="theme-pill px-2.5 py-1 rounded-full text-[11px] text-[#E4D0C8] hover:text-white transition" title="Gece Lavantası & Ay Tozu">
+                        Lavanta
+                    </button>
+                </div>
+
+                <!-- Quick Music Play/Pause Button -->
+                <button id="headerMusicBtn" onclick="toggleMasterMusic()" class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-[#E5987F]/30 to-[#F3CE93]/25 border border-[#F3CE93]/40 text-xs text-[#FBF4EB] hover:border-[#F3CE93] transition shadow-md">
+                    <i data-lucide="music" class="w-4 h-4 text-[#F3CE93]"></i>
+                    <span id="headerMusicText">Plağın Sesi Kapalı</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================
+         MAIN EDITORIAL STORYBOOK CONTAINER
+         ========================================================== -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pb-32 pt-8 space-y-24 sm:space-y-32">
+
+        <!-- ======================================================
+             SECTION 1: ASYMMETRICAL HERO & ARCHED BEDSIDE WINDOW
+             ====================================================== -->
+        <section id="pencere" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+                <!-- Left Column: Poetic Presence & Live Bedside Action (7 cols) -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#E5987F]/15 border border-[#F3CE93]/30 text-[#F3CE93] text-xs">
+                        <span class="w-2 h-2 rounded-full bg-[#F3CE93] animate-ping"></span>
+                        <span id="liveClockBadge">Pazar Gecesi Nöbeti • Şu An Yanındayım</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-6xl xl:text-[4.1rem] font-light tracking-tight text-[#FBF4EB] leading-[1.12]">
+                        Yarın saat 11:00'i beklemene gerek yok... <br>
+                        <span class="italic font-normal bg-gradient-to-r from-[#F3CE93] via-[#E5987F] to-[#F3CE93] bg-clip-text text-transparent">
+                            Bu gece de başucunda, elini tutuyorum.
+                        </span>
+                    </h1>
+
+                    <p class="font-serif text-lg sm:text-xl text-[#E4D0C8]/90 leading-relaxed font-light">
+                        Bedeninin biraz yorgun düştüğünü, kaslarının gevşemeye ve sadece sessiz bir şefkatle sarmalanmaya ihtiyaç duyduğunu biliyorum. 
+                        Hiçbir şeyi açıklamak ya da güçlü durmak zorunda değilsin güzelim. 
+                        Odanın en loş köşesinde, tam başucunda oturduğumu, kaşmir battaniyeni omuzlarına kadar çektiğimi ve sen uyuyana kadar saçlarını okşadığımı hisset.
+                    </p>
+
+                    <!-- Interactive Live Bedside Moment Card -->
+                    <div class="velvet-panel rounded-3xl p-6 sm:p-7 border-l-4 border-l-[#F3CE93] relative overflow-hidden">
+                        <div class="flex items-center justify-between text-xs text-[#F3CE93] uppercase tracking-widest mb-2">
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                Şu Saniye Başucunda Ne Yapıyorum?
+                            </span>
+                            <button onclick="nextBedsideScene()" class="px-3 py-1 rounded-full bg-white/5 hover:bg-white/15 border border-[#F3CE93]/25 text-[11px] text-[#FBF4EB] transition flex items-center gap-1">
+                                <i data-lucide="refresh-cw" class="w-3 h-3"></i> Sahneyi Değiştir
+                            </button>
+                        </div>
+
+                        <h3 id="sceneTitle" class="font-display italic text-xl sm:text-2xl text-white mt-1">
+                            "Yorganını omuzlarına örtüp soğuk ellerini iki avucumun arasına aldım..."
+                        </h3>
+                        <p id="sceneDescription" class="font-serif text-base sm:text-lg text-[#E4D0C8]/90 mt-2 leading-relaxed">
+                            Odanın içinde sadece mum ışığı ve dışarıdaki gecenin dinginliği var. Başparmağımla elinin üstünü yavaşça okşarken üzerindeki bütün ağırlık eriyip gidiyor. Sabaha kadar buradayım.
+                        </p>
+
+                        <!-- Quick Mood Selector Pills -->
+                        <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-2">
+                            <button onclick="setBedsideMood('embrace')" class="px-3.5 py-2 rounded-xl bg-[#E5987F]/20 hover:bg-[#E5987F]/35 border border-[#E5987F]/40 text-xs text-[#FBF4EB] transition">
+                                🤍 Beni Göğsüne Yasla
+                            </button>
+                            <button onclick="setBedsideMood('warmth')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/15 border border-white/15 text-xs text-[#E4D0C8] transition">
+                                🔥 Ellerimi ve Karnımı Isıt
+                            </button>
+                            <button onclick="setBedsideMood('hair')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/15 border border-white/15 text-xs text-[#E4D0C8] transition">
+                                ✨ Saçlarımı Okşa
+                            </button>
+                            <button onclick="toggleCashmereBlanket()" class="px-3.5 py-2 rounded-xl bg-[#F3CE93]/15 hover:bg-[#F3CE93]/30 border border-[#F3CE93]/35 text-xs text-[#F3CE93] transition">
+                                🧣 <span id="blanketToggleLabel">Kaşmir Battaniyeyi Sar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Illustrated Arched Bedside Window & 11:00 Countdown (5 cols) -->
+                <div class="lg:col-span-5 flex flex-col items-center">
+                    <div class="w-full max-w-md arch-frame velvet-panel p-6 sm:p-8 relative overflow-hidden flex flex-col items-center text-center">
+                        <!-- Animated Window Canvas (Moon, Shooting Stars, Raindrops on Glass) -->
+                        <div class="relative w-full h-64 sm:h-72 rounded-t-[150px] rounded-b-2xl overflow-hidden border border-[#F3CE93]/30 mb-6 shadow-inner bg-gradient-to-b from-[#09060E] via-[#160F24] to-[#291932]">
+                            <canvas id="windowPaneCanvas" class="w-full h-full block"></canvas>
+
+                            <!-- Window Mullion Bars (Architectural Crossbars) -->
+                            <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                                <div class="w-full h-[1.5px] bg-[#F3CE93]/20"></div>
+                            </div>
+                            <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                                <div class="h-full w-[1.5px] bg-[#F3CE93]/20"></div>
+                            </div>
+
+                            <!-- Window Sill Candle & Silhouette -->
+                            <div class="absolute bottom-2 right-5 flex items-end gap-2 pointer-events-none">
+                                <div class=" flex flex-col items-center">
+                                    <div class="w-2.5 h-4 rounded-full bg-gradient-to-t from-[#E5987F] via-[#F3CE93] to-white animate-flame-flicker shadow-[0_0_15px_#F3CE93]"></div>
+                                    <div class="w-4 h-7 bg-[#FBF4EB]/90 rounded-t-sm"></div>
+                                </div>
+                            </div>
+
+                            <button onclick="triggerWindowShootingStar()" class="absolute top-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black/45 border border-[#F3CE93]/30 text-[11px] text-[#F3CE93] hover:bg-black/70 transition">
+                                ✨ Pencereye Dokun: Yıldız Kaydır
+                            </button>
+                        </div>
+
+                        <!-- Countdown to Tomorrow 9 November 2026 11:00 -->
+                        <div class="w-full">
+                            <div class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] mb-3 flex items-center justify-center gap-1.5">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                                <span>9 Kasım Pazartesi • Saat 11:00 Kavuşmamıza</span>
+                            </div>
+
+                            <div class="grid grid-cols-4 gap-2.5">
+                                <div class="bg-black/35 border border-[#F3CE93]/20 rounded-2xl p-3">
+                                    <div id="cd-days" class="font-display text-2xl sm:text-3xl text-white tabular-nums">00</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-[#E4D0C8]/70 mt-0.5">Gün</div>
+                                </div>
+                                <div class="bg-black/35 border border-[#F3CE93]/20 rounded-2xl p-3">
+                                    <div id="cd-hours" class="font-display text-2xl sm:text-3xl text-[#F3CE93] tabular-nums">11</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-[#E4D0C8]/70 mt-0.5">Saat</div>
+                                </div>
+                                <div class="bg-black/35 border border-[#F3CE93]/20 rounded-2xl p-3">
+                                    <div id="cd-minutes" class="font-display text-2xl sm:text-3xl text-[#E5987F] tabular-nums">47</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-[#E4D0C8]/70 mt-0.5">Dakika</div>
+                                </div>
+                                <div class="bg-black/35 border border-[#F3CE93]/20 rounded-2xl p-3">
+                                    <div id="cd-seconds" class="font-display text-2xl sm:text-3xl text-[#E4D0C8] tabular-nums">00</div>
+                                    <div class="text-[10px] uppercase tracking-widest text-[#E4D0C8]/70 mt-0.5">Saniye</div>
+                                </div>
+                            </div>
+
+                            <p id="countdownSubtext" class="font-serif italic text-sm text-[#E4D0C8]/85 mt-3">
+                                "Bu gece ruhum başucunda nöbette, sabah 11:00'de ise kollarım boynunda..."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 2: POLYPHONIC VINYL TURNTABLE & MULTI-TRACK MUSIC STUDIO
+             (Deeply engineered polyphonic music & distinct atmospheric layers)
+             ====================================================== -->
+        <section id="pikap-studyosu" class="scroll-mt-24">
+            <div class="velvet-panel rounded-[2.5rem] p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 border-b border-white/10 pb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.25em] text-[#F3CE93] font-semibold">Çok Sesli Akustik Gece Stüdyosu</span>
+                        <h2 class="font-display text-3xl sm:text-5xl text-white font-light mt-1">
+                            Başucu Plak Çaları & <span class="italic text-[#E5987F]">Gece Besteleri</span>
+                        </h2>
+                        <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 mt-2 max-w-3xl">
+                            Senin için birbirinden tamamen farklı 4 gerçek enstrümantal beste (Keçe Piyano Sonatı, Akustik Gitar & Çello, Kristal Arp & Celesta, Sıcak Lo-Fi Rhodes) ve altına karıştırabileceğin 4 doğal gece atmosferi hazırladım.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="stopAllAudioEngine()" class="px-4 py-2.5 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 text-xs text-[#E4D0C8] transition">
+                            Tüm Sesleri Dinlendir
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left: Animated Vinyl Turntable & Live Harmonic Waveform (5 cols) -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+                            <!-- Ambient Platter Glow -->
+                            <div id="vinylGlow" class="absolute inset-2 rounded-full bg-gradient-to-tr from-[#E5987F]/30 to-[#F3CE93]/25 blur-2xl opacity-40 transition-opacity duration-700"></div>
+
+                            <!-- Spinning Vinyl Record -->
+                            <div id="vinylRecordEl" onclick="toggleMasterMusic()" class="vinyl-disc vinyl-paused animate-spin-vinyl w-60 h-60 sm:w-64 sm:h-64 rounded-full relative flex items-center justify-center cursor-pointer select-none border border-[#F3CE93]/25">
+                                <!-- Vinyl Sheen Reflection -->
+                                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none"></div>
+                                <!-- Center Record Label -->
+                                <div class="w-24 h-24 rounded-full bg-gradient-to-br from-[#E5987F] via-[#B85D52] to-[#382039] border-2 border-[#F3CE93]/60 flex flex-col items-center justify-center text-center p-2 shadow-inner">
+                                    <span id="vinylLabelSide" class="text-[9px] uppercase tracking-widest text-[#F3CE93]">PLAK #1</span>
+                                    <span id="vinylLabelTitle" class="font-display italic text-[11px] text-white leading-tight mt-0.5">Keçe Piyano Noktürnü</span>
+                                    <div class="w-3 h-3 rounded-full bg-[#120B16] border border-[#F3CE93]/50 mt-1.5"></div>
+                                </div>
+                            </div>
+
+                            <!-- Tonearm SVG -->
+                            <svg id="tonearmSvg" viewBox="0 0 100 140" class="w-24 h-36 absolute -right-2 top-2 pointer-events-none transition-transform duration-700 origin-[78px_22px]" style="transform: rotate(-28deg);">
+                                <circle cx="78" cy="22" r="14" fill="#2A1B33" stroke="#F3CE93" stroke-width="2" />
+                                <circle cx="78" cy="22" r="6" fill="#E5987F" />
+                                <path d="M78 22 L72 95 L52 122" fill="none" stroke="#F3CE93" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="44" y="116" width="12" height="16" rx="2" transform="rotate(32 50 124)" fill="#E5987F" stroke="#FBF4EB" stroke-width="1" />
+                            </svg>
+                        </div>
+
+                        <!-- Live Audio Spectrum Visualizer Canvas -->
+                        <div class="w-full mt-5 bg-black/40 rounded-2xl p-3 border border-[#F3CE93]/15">
+                            <div class="flex items-center justify-between text-[11px] text-[#E4D0C8]/80 mb-1.5 px-1">
+                                <span id="nowPlayingBanner" class="font-serif italic text-[#F3CE93]">Plak seçip başlatmak için dokun...</span>
+                                <span id="masterTempoTag" class="font-mono text-[10px]">Salon Akustiği • 24-bit Synth</span>
+                            </div>
+                            <canvas id="audioSpectrumCanvas" class="w-full h-14 block rounded-lg"></canvas>
+                        </div>
+
+                        <!-- Master Music Volume -->
+                        <div class="w-full mt-3 flex items-center gap-3 px-2">
+                            <i data-lucide="volume-2" class="w-4 h-4 text-[#F3CE93] shrink-0"></i>
+                            <span class="text-xs text-[#E4D0C8] whitespace-nowrap">Müzik Sesi</span>
+                            <input type="range" min="0" max="100" value="70" oninput="setMasterMusicVolume(this.value)" class="luxury-slider">
+                        </div>
+                    </div>
+
+                    <!-- Right: 4 Full Musical Compositions + 4 Distinct Ambient Layers (7 cols) -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <h3 class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] mb-3">
+                                1. Enstrümantal Gece Bestesini Seç (Çok Sesli Gerçek Melodi & Akorlar)
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <!-- Track 1: Felt Piano Nocturne -->
+                                <button onclick="selectMusicalComposition('piano')" id="track-btn-piano" class="track-card text-left p-4 rounded-2xl bg-black/35 border border-[#F3CE93]/40 hover:border-[#F3CE93] transition flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-[#E5987F]/20 border border-[#E5987F]/40 flex items-center justify-center text-[#F3CE93] shrink-0 mt-0.5">
+                                        <i data-lucide="music" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-white">1. Gece Yarısı Keçe Piyano</div>
+                                        <div class="text-xs text-[#E4D0C8]/75 mt-0.5">Sol el kırık arpejler ve sağ el duygusal noktürn melodisi (Re Minör / Fa Majör)</div>
+                                    </div>
+                                </button>
+
+                                <!-- Track 2: Acoustic Guitar & Warm Cello -->
+                                <button onclick="selectMusicalComposition('guitar')" id="track-btn-guitar" class="track-card text-left p-4 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93]/60 transition flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-[#F3CE93]/15 border border-[#F3CE93]/30 flex items-center justify-center text-[#F3CE93] shrink-0 mt-0.5">
+                                        <i data-lucide="guitar" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-white">2. Akustik Gitar & Sıcak Çello</div>
+                                        <div class="text-xs text-[#E4D0C8]/75 mt-0.5">Parmak stili akustik gitar tınıları ve derinden gelen yaylı çello eşliği</div>
+                                    </div>
+                                </button>
+
+                                <!-- Track 3: Celesta, Harp & Warm Pad -->
+                                <button onclick="selectMusicalComposition('harp')" id="track-btn-harp" class="track-card text-left p-4 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93]/60 transition flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-purple-400/15 border border-purple-300/30 flex items-center justify-center text-purple-200 shrink-0 mt-0.5">
+                                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-white">3. Konser Arpı & Yıldız Celesta</div>
+                                        <div class="text-xs text-[#E4D0C8]/75 mt-0.5">Büyülü arp glissandoları, kristal celesta ve nefes alan stereo sıcak pad</div>
+                                    </div>
+                                </button>
+
+                                <!-- Track 4: Warm Lo-Fi Rhodes & Sub Bass -->
+                                <button onclick="selectMusicalComposition('lofi')" id="track-btn-lofi" class="track-card text-left p-4 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93]/60 transition flex items-start gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-400/15 border border-amber-300/30 flex items-center justify-center text-amber-200 shrink-0 mt-0.5">
+                                        <i data-lucide="radio" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-white">4. Sıcak Rhodes & Gece Kaseti</div>
+                                        <div class="text-xs text-[#E4D0C8]/75 mt-0.5">Yumuşak caz 9'lu akorları, tremololu elektrik piyano ve derin bas</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 4 Distinct Ambient Soundscapes (Can be layered simultaneously) -->
+                        <div class="pt-2">
+                            <h3 class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] mb-3">
+                                2. Altına Karıştırabileceğin Doğal Gece Atmosferleri (Birlikte Açılabilir)
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <!-- Layer A: Window Rain & Distant Soft Thunder -->
+                                <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <button onclick="toggleAmbientLayer('rain')" id="amb-btn-rain" class="flex items-center gap-2.5 text-left">
+                                            <div class="w-8 h-8 rounded-lg bg-sky-400/15 border border-sky-300/30 flex items-center justify-center text-sky-200">
+                                                <i data-lucide="cloud-rain" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <div class="text-xs font-semibold text-white">Cama Vuran Yağmur & Damlalar</div>
+                                                <div id="amb-status-rain" class="text-[10px] text-[#E4D0C8]/60">Kapalı</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="45" oninput="setAmbientVolume('rain', this.value)" class="luxury-slider">
+                                </div>
+
+                                <!-- Layer B: Hearth Fireplace Crackle -->
+                                <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <button onclick="toggleAmbientLayer('fire')" id="amb-btn-fire" class="flex items-center gap-2.5 text-left">
+                                            <div class="w-8 h-8 rounded-lg bg-orange-400/15 border border-orange-300/30 flex items-center justify-center text-orange-200">
+                                                <i data-lucide="flame" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <div class="text-xs font-semibold text-white">Şömine Korları & Odun Çıtırtısı</div>
+                                                <div id="amb-status-fire" class="text-[10px] text-[#E4D0C8]/60">Kapalı</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="50" oninput="setAmbientVolume('fire', this.value)" class="luxury-slider">
+                                </div>
+
+                                <!-- Layer C: Realistic Breathing Cat Purr -->
+                                <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <button onclick="toggleAmbientLayer('purr')" id="amb-btn-purr" class="flex items-center gap-2.5 text-left">
+                                            <div class="w-8 h-8 rounded-lg bg-pink-400/15 border border-pink-300/30 flex items-center justify-center text-pink-200">
+                                                <i data-lucide="cat" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <div class="text-xs font-semibold text-white">Ayak Ucunda Mırıldanan Kedi</div>
+                                                <div id="amb-status-purr" class="text-[10px] text-[#E4D0C8]/60">Kapalı</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="55" oninput="setAmbientVolume('purr', this.value)" class="luxury-slider">
+                                </div>
+
+                                <!-- Layer D: 56 BPM Heartbeat & Calm Breath -->
+                                <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <button onclick="toggleAmbientLayer('heart')" id="amb-btn-heart" class="flex items-center gap-2.5 text-left">
+                                            <div class="w-8 h-8 rounded-lg bg-rose-400/15 border border-rose-300/30 flex items-center justify-center text-rose-200">
+                                                <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <div class="text-xs font-semibold text-white">Göğsümdeki Kalp Atışı (56 BPM)</div>
+                                                <div id="amb-status-heart" class="text-[10px] text-[#E4D0C8]/60">Kapalı</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="65" oninput="setAmbientVolume('heart', this.value)" class="luxury-slider">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 3: INTERACTIVE HERBAL TEA BREWING RITUAL ("SICAK BİTKİ ÇAYI KÖŞESİ")
+             ====================================================== -->
+        <section id="bitki-cayi" class="scroll-mt-24">
+            <div class="velvet-panel rounded-[2.5rem] p-6 sm:p-10 lg:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Left: Interactive Steaming Porcelain Cup SVG (5 cols) -->
+                    <div class="lg:col-span-5 flex flex-col items-center text-center">
+                        <div class="relative w-64 h-64 flex items-center justify-center">
+                            <div id="teaAuraGlow" class="absolute inset-4 rounded-full bg-[#F3CE93]/20 blur-3xl transition-all duration-700"></div>
+
+                            <svg viewBox="0 0 220 220" class="w-full h-full relative z-10 overflow-visible">
+                                <!-- Rising Steam Waves -->
+                                <g id="teaSteamGroup" class="opacity-80">
+                                    <path d="M85 68 Q75 45 90 25 Q105 10 92 -5" fill="none" stroke="#FBF4EB" stroke-width="2.5" stroke-linecap="round" class="animate-steam-rise" />
+                                    <path d="M110 62 Q122 40 106 20 Q94 5 112 -10" fill="none" stroke="#F3CE93" stroke-width="2.5" stroke-linecap="round" class="animate-steam-rise" style="animation-delay: 1.2s;" />
+                                    <path d="M135 68 Q125 45 140 25 Q150 10 138 -5" fill="none" stroke="#E5987F" stroke-width="2.5" stroke-linecap="round" class="animate-steam-rise" style="animation-delay: 2.4s;" />
+                                </g>
+
+                                <!-- Porcelain Saucer -->
+                                <ellipse cx="110" cy="182" rx="76" ry="14" fill="#2A1B33" stroke="#F3CE93" stroke-width="2" />
+                                <ellipse cx="110" cy="180" rx="52" ry="7" fill="#180F1E" />
+
+                                <!-- Cup Handle -->
+                                <path d="M162 106 C192 106 192 152 156 154" fill="none" stroke="#F3CE93" stroke-width="6" stroke-linecap="round" />
+
+                                <!-- Cup Body -->
+                                <path d="M52 92 L168 92 C168 148 148 178 110 178 C72 178 52 148 52 92 Z"
+                                      fill="url(#porcelainGrad)" stroke="#F3CE93" stroke-width="2" />
+
+                                <!-- Rim & Liquid Surface -->
+                                <ellipse cx="110" cy="92" rx="58" ry="14" fill="#1B1120" stroke="#F3CE93" stroke-width="1.5" />
+                                <ellipse id="teaLiquidSurface" cx="110" cy="94" rx="52" ry="11" fill="#D9824B" class="transition-colors duration-700" />
+
+                                <!-- Floating Flower Petals inside Tea -->
+                                <circle cx="96" cy="93" r="3" fill="#F3CE93" opacity="0.85" />
+                                <circle cx="122" cy="96" r="2.5" fill="#FBF4EB" opacity="0.85" />
+                                <circle cx="110" cy="91" r="2" fill="#E5987F" opacity="0.9" />
+
+                                <!-- Gold Floral Motif on Cup -->
+                                <path d="M95 135 Q110 148 125 135" fill="none" stroke="#F3CE93" stroke-width="1.5" opacity="0.7" />
+                                <circle cx="110" cy="132" r="3.5" fill="#F3CE93" opacity="0.8" />
+
+                                <defs>
+                                    <linearGradient id="porcelainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3B2544" />
+                                        <stop offset="100%" stop-color="#1E1224" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <button onclick="sipHerbalTea()" class="mt-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-[#F3CE93] to-[#E5987F] text-[#160F18] font-semibold text-sm shadow-lg hover:scale-105 active:scale-95 transition flex items-center gap-2">
+                            <i data-lucide="coffee" class="w-4 h-4"></i>
+                            <span>Sıcak Çayından Bir Yudum Al (<span id="sipCountText">0</span>)</span>
+                        </button>
+                    </div>
+
+                    <!-- Right: Tea Blend Customizer & Comfort Message (7 cols) -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div>
+                            <span class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] font-semibold">İçini Isıtan Başucu Fincanı</span>
+                            <h2 class="font-display text-3xl sm:text-4xl text-white font-light mt-1">
+                                Senin İçin Demlediğim <span class="italic text-[#E5987F]">Gece Çayı</span>
+                            </h2>
+                            <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 mt-2 leading-relaxed">
+                                Karnını, ellerini ve içini yumuşacık ısıtsın diye başucuna sıcak bir fincan bıraktım. Aşağıdaki bitkilerden dilediğine dokunarak fincanına ekleyebilirsin; her dokunuşta porselen kaşık tınısını duyacaksın.
+                            </p>
+                        </div>
+
+                        <!-- 6 Herbal Ingredients -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <button onclick="brewTeaIngredient('chamomile', 'Altın Papatya & Bal', '#E5A94C', 'Papatya ve ılık bal, bedenindeki bütün gerginliği ve sızıyı pamuk gibi yumuşatıyor...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-[#F3CE93]/30 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">🌼 Altın Papatya & Bal</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">Kasları gevşetir, tatlı uyku verir</div>
+                            </button>
+
+                            <button onclick="brewTeaIngredient('melissa', 'Limon Melisa & Ihlamur', '#C89D54', 'Kokusu bile omuzlarındaki ağırlığı almaya yetiyor; derin bir nefes çek içine...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">🌿 Melisa & Ihlamur</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">Dinginlik ve huzur sarılışı</div>
+                            </button>
+
+                            <button onclick="brewTeaIngredient('cinnamon', 'Kuşburnu & Sıcak Tarçın', '#B84A39', 'Yakut rengi sıcaklığıyla üşüyen parmak uçlarından kalbine kadar içini ısıtıyor...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">🌺 Kuşburnu & Tarçın</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">İç ısıtan tatlı baharat aroması</div>
+                            </button>
+
+                            <button onclick="brewTeaIngredient('jasmine', 'Gece Yasemini & Vanilya', '#D49B6A', 'Vanilya ve yasemin buharı yastığının etrafını en huzurlu kokuyla sarıyor...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">🌸 Yasemin & Vanilya</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">Yumuşak ve romantik koku</div>
+                            </button>
+
+                            <button onclick="brewTeaIngredient('fennel', 'Rezene & Elma Çiçeği', '#C98A4B', 'Karnındaki ve bedenindeki tüm huzursuzluğu yatıştıran en şefkatli karışım...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">🍎 Rezene & Elma</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">Karnını rahatlatan ılık dokunuş</div>
+                            </button>
+
+                            <button onclick="brewTeaIngredient('lavender', 'Kraliyet Lavantası & Nane', '#9D6B84', 'Baş ağrısını ve yorgunluğu alıp götüren ferahlatıcı gece iksiri...')"
+                                    class="p-3.5 rounded-2xl bg-black/35 border border-white/10 hover:border-[#F3CE93] text-left transition group">
+                                <div class="text-sm font-semibold text-white group-hover:text-[#F3CE93]">💜 Lavanta & Yaprak</div>
+                                <div class="text-[11px] text-[#E4D0C8]/70 mt-0.5">Zihni boşaltan gece ferahlığı</div>
+                            </button>
+                        </div>
+
+                        <!-- Tea Whisper Box -->
+                        <div class="p-5 rounded-2xl bg-black/40 border border-[#F3CE93]/25">
+                            <div class="flex items-center justify-between text-xs text-[#F3CE93] mb-1">
+                                <span id="activeTeaTitle" class="font-semibold">Fincanında: Altın Papatya & Bal</span>
+                                <span>Sıcaklık: 68°C (Tam İçmelik)</span>
+                            </div>
+                            <p id="activeTeaWhisper" class="font-serif italic text-base sm:text-lg text-[#FBF4EB]">
+                                "Fincanı iki elinin arasına aldığında avuçlarına yayılan o sıcaklık, benim ellerimin sıcaklığı..."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 4: LUMINOUS NIGHT BOTANICAL CONSERVATORY & CRYSTAL VASE ("ÇİÇEK KISMI")
+             ====================================================== -->
+        <section id="kristal-sera" class="scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs uppercase tracking-[0.25em] text-[#F3CE93] font-semibold">Kristal Gece Serası</span>
+                <h2 class="font-display text-3xl sm:text-5xl text-white font-light mt-2">
+                    Başucunda Açan <span class="italic text-[#E5987F]">Işıltılı Çiçekler</span>
+                </h2>
+                <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 mt-2">
+                    Her bir çiçeğe dokunduğunda kendine özgü çok sesli bir **Konser Arpı Akoru** çalacak, yaprakları ışıldayarak açacak ve başucu vazona yerleşecek.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: 8 Botanical Cards (8 cols) -->
+                <div id="conservatoryGrid" class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Right: Crystal Bedside Vase (4 cols) -->
+                <div class="lg:col-span-4 velvet-panel rounded-[2.2rem] p-6 flex flex-col items-center text-center justify-between min-h-[440px]">
+                    <div class="w-full flex items-center justify-between text-xs text-[#E4D0C8] border-b border-white/10 pb-3">
+                        <span>Kristal Başucu Vazon</span>
+                        <span id="vaseBadge" class="px-3 py-0.5 rounded-full bg-[#E5987F]/25 text-[#F3CE93] font-medium">0 / 8 Çiçek</span>
+                    </div>
+
+                    <div class="my-4 relative w-48 h-56 flex items-center justify-center">
+                        <svg viewBox="0 0 200 230" class="w-full h-full overflow-visible">
+                            <circle cx="100" cy="110" r="76" fill="rgba(229, 152, 127, 0.12)" />
+                            <!-- Dynamic Bouquet Group -->
+                            <g id="bouquetSvgGroup"></g>
+                            <!-- Faceted Crystal Vase -->
+                            <path d="M68 128 L132 128 L146 196 C148 208 136 216 122 216 L78 216 C64 216 52 208 54 196 Z"
+                                  fill="url(#crystalVaseGrad)" stroke="#F3CE93" stroke-width="1.8" />
+                            <ellipse cx="100" cy="128" rx="32" ry="7" fill="#2A1B33" stroke="#F3CE93" stroke-width="1.5" />
+                            <!-- Gold Filigree Heart -->
+                            <path d="M100 182 C100 182 86 170 86 162 C86 156 92 153 97 157 L100 160 L103 157 C108 153 114 156 114 162 C114 170 100 182 100 182 Z"
+                                  fill="#F3CE93" opacity="0.85" />
+                            <defs>
+                                <linearGradient id="crystalVaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(229, 152, 127, 0.35)" />
+                                    <stop offset="50%" stop-color="rgba(56, 32, 57, 0.65)" />
+                                    <stop offset="100%" stop-color="rgba(243, 206, 147, 0.28)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="w-full bg-black/40 rounded-2xl p-4 border border-[#F3CE93]/25 text-left">
+                        <div class="flex items-center justify-between">
+                            <h4 id="flowerDetailTitle" class="font-display text-lg text-[#F3CE93]">Bir Çiçeğe Dokun...</h4>
+                            <span id="flowerDetailNote" class="text-[11px] text-[#E5987F] italic">Arp Akoru</span>
+                        </div>
+                        <p id="flowerDetailDesc" class="font-serif text-sm text-[#FBF4EB]/90 mt-1.5 leading-relaxed">
+                            Çiçeklerden birine dokunduğunda senin için arp telleriyle açacak ve başucundaki vazoya yerleşecek.
+                        </p>
+                    </div>
+
+                    <button onclick="bloomEntireConservatory()" class="mt-3 w-full py-2.5 rounded-xl bg-[#E5987F]/20 hover:bg-[#E5987F]/35 border border-[#F3CE93]/35 text-xs text-[#FBF4EB] transition">
+                        Tüm Buketi Arp Glissandosuyla Açtır ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 5: MUSICAL SILK & SINGING BOWL CARESS CANVAS ("SAÇLARINI OKŞARKEN")
+             ====================================================== -->
+        <section id="ipek-tuval" class="scroll-mt-24">
+            <div class="velvet-panel rounded-[2.5rem] p-6 sm:p-10 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] font-semibold">Tibet Çanı & İpek Dokunuş Tuvali</span>
+                        <h2 class="font-display text-3xl sm:text-4xl text-white font-light mt-1">
+                            Saçlarını Okşayan <span class="italic text-[#E5987F]">Işık Kurdeleleri</span>
+                        </h2>
+                        <p class="font-serif text-base text-[#E4D0C8]/85 mt-1 max-w-2xl">
+                            Parmağını veya fareni aşağıdaki ipek tuvalde yavaşça gezdir. Her dokunuşun akıcı kehribar-gül kurdeleleri çizecek ve arka plandaki müzikle tam uyumlu, sıcak **Singing Bowl (Tibet Kristal Kasesi) & Arp** tınıları üretecek.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 self-start md:self-center">
+                        <span class="px-4 py-2 rounded-2xl bg-black/45 border border-[#F3CE93]/30 text-xs text-[#E4D0C8]">
+                            Dinginlik Rezonansı: <strong id="silkCalmMeter" class="text-[#F3CE93] font-mono">%0</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="relative w-full h-72 sm:h-80 rounded-3xl overflow-hidden border border-[#F3CE93]/25 bg-gradient-to-b from-[#0D0711] via-[#190F21] to-[#24152E]">
+                    <canvas id="silkRibbonCanvas" class="w-full h-full cursor-pointer touch-none block"></canvas>
+                    <div class="absolute inset-x-0 bottom-5 flex justify-center pointer-events-none px-4">
+                        <div id="silkWhisperOverlay" class="px-6 py-2.5 rounded-full bg-black/75 border border-[#F3CE93]/35 text-[#FBF4EB] font-serif italic text-base sm:text-xl text-center shadow-2xl">
+                            "Parmağını ipeğin üzerinde kaydır; saçlarında dolaşan elimin sıcaklığını hisset..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 6: PRESS & HOLD EMBRACE SIMULATOR ("AVUCUMUN SICAKLIĞI")
+             ====================================================== -->
+        <section id="sarilma" class="scroll-mt-24">
+            <div class="velvet-panel rounded-[2.5rem] p-6 sm:p-12 text-center relative overflow-hidden">
+                <div class="max-w-2xl mx-auto">
+                    <span class="text-xs uppercase tracking-[0.25em] text-[#F3CE93] font-semibold">56 BPM Kalp Atışı & Sıcaklık</span>
+                    <h2 class="font-display text-3xl sm:text-5xl text-white font-light mt-2">
+                        Başını Göğsüme Yasla
+                    </h2>
+                    <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 mt-3 leading-relaxed">
+                        Kendini halsiz, üşümüş ya da yalnız hissettiğin an aşağıdaki mühre <strong>parmağınla basılı tut</strong>. 
+                        Basılı tuttuğun sürece derin kalp atışımı, sıcak kedi mırıltısını ve seni saran kollarımın sıcaklığını hissedeceksin.
+                    </p>
+
+                    <div class="my-10 relative flex items-center justify-center">
+                        <div id="embraceRings" class="hidden absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="embrace-ring w-40 h-40"></div>
+                            <div class="embrace-ring w-40 h-40" style="animation-delay: 0.75s;"></div>
+                            <div class="embrace-ring w-40 h-40" style="animation-delay: 1.5s;"></div>
+                        </div>
+
+                        <button id="embraceHoldBtn"
+                            onmousedown="startDeepEmbrace(event)"
+                            onmouseup="stopDeepEmbrace()"
+                            onmouseleave="stopDeepEmbrace()"
+                            ontouchstart="startDeepEmbrace(event)"
+                            ontouchend="stopDeepEmbrace()"
+                            ontouchcancel="stopDeepEmbrace()"
+                            class="relative z-10 select-none w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-br from-[#E5987F]/35 via-[#382039]/80 to-[#F3CE93]/30 border-2 border-[#F3CE93]/60 shadow-[0_0_60px_rgba(229,152,127,0.3)] flex flex-col items-center justify-center gap-2 transition-transform duration-300 active:scale-95 cursor-pointer">
+                            <div class="w-16 h-16 rounded-full wax-seal flex items-center justify-center animate-heartbeat-slow">
+                                <i data-lucide="heart" class="w-8 h-8 text-[#FBF4EB] fill-[#FBF4EB]"></i>
+                            </div>
+                            <span id="embraceBtnLabel" class="font-display italic text-lg sm:text-xl text-white mt-1 px-4">
+                                Sarılmak İçin Basılı Tut
+                            </span>
+                            <span class="text-[11px] text-[#F3CE93]/85">Kalp Atışı & Sıcaklık Akışı</span>
+                        </button>
+                    </div>
+
+                    <div class="max-w-md mx-auto bg-black/45 rounded-2xl p-4 border border-[#F3CE93]/25">
+                        <div class="flex justify-between items-center text-xs mb-2">
+                            <span class="text-[#E4D0C8] flex items-center gap-1.5">
+                                <i data-lucide="flame" class="w-4 h-4 text-[#F3CE93]"></i>
+                                Vücut Sıcaklığımız
+                            </span>
+                            <span id="embraceTempText" class="font-mono font-semibold text-[#F3CE93]">36.5°C (%0)</span>
+                        </div>
+                        <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden p-0.5">
+                            <div id="embraceProgressBar" class="h-full w-0 rounded-full bg-gradient-to-r from-[#E5987F] via-[#F3CE93] to-[#FBF4EB] transition-all duration-150"></div>
+                        </div>
+                        <p id="embraceWhisperText" class="mt-3 font-serif italic text-base text-[#FBF4EB] min-h-[3rem] flex items-center justify-center">
+                            "Parmağını kalbin üzerine koy ve bütün ağırlığını göğsüme bırak..."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 7: 12 WAX-SEALED BEDSIDE LETTERS ("12 MÜHÜRLÜ MEKTUP")
+             ====================================================== -->
+        <section id="zarflar" class="scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs uppercase tracking-[0.25em] text-[#F3CE93] font-semibold">Mum Mühürlü Başucu Zarfları</span>
+                <h2 class="font-display text-3xl sm:text-5xl text-white font-light mt-2">
+                    Bu Gece Hangi His İçindeysen <span class="italic text-[#E5987F]">Onu Aç</span>
+                </h2>
+                <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 mt-2">
+                    İçlerinde gelecek zamanlı vaatler değil; tam şu saniye yatağının başucunda duran şefkatimin satırları var.
+                </p>
+            </div>
+
+            <div id="envelopesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 8: 100 WHISPERED BEDSIDE NOTES JAR ("100 GECE FISILTISI")
+             ====================================================== -->
+        <section id="kavanoz" class="scroll-mt-24">
+            <div class="velvet-panel rounded-[2.5rem] p-6 sm:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 space-y-5 text-center lg:text-left">
+                        <span class="inline-block text-xs uppercase tracking-[0.2em] text-[#F3CE93] font-semibold px-3.5 py-1 rounded-full bg-[#F3CE93]/10 border border-[#F3CE93]/25">
+                            100 Başucu Fısıltısı
+                        </span>
+                        <h2 class="font-display text-3xl sm:text-5xl text-white font-light leading-tight">
+                            Kulağına Fısıldadığım <span class="italic text-[#E5987F]">100 Güzel Detay</span>
+                        </h2>
+                        <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 leading-relaxed">
+                            Her dokunuşta kristal bir arp tınısıyla yeni bir başucu notu açılır. İstersen tüm 100 notu tek listede de okuyabilirsin.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-2 pt-1">
+                            <button onclick="filterJarCategory('all', this)" class="jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-[#F3CE93] text-[#120B16] font-semibold transition">Tümü (100)</button>
+                            <button onclick="filterJarCategory('suan', this)" class="jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">Şu An Yanında</button>
+                            <button onclick="filterJarCategory('huzur', this)" class="jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">Senin Huzurun</button>
+                            <button onclick="filterJarCategory('detay', this)" class="jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">Güzel Detayların</button>
+                            <button onclick="filterJarCategory('sabah', this)" class="jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">9 Kasım Saat 11:00</button>
+                        </div>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                            <button onclick="drawRandomNote()" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#E5987F] to-[#F3CE93] text-[#120B16] font-semibold text-sm hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-2 shadow-lg">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                <span>Yeni Bir Fısıltı Çek</span>
+                            </button>
+                            <button onclick="toggleAllNotesModal()" class="px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/15 border border-[#F3CE93]/25 text-[#FBF4EB] text-sm transition">
+                                100 Notun Tümünü Aç
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div id="jarNoteCard" class="bg-black/45 border-2 border-[#F3CE93]/35 rounded-3xl p-8 sm:p-12 min-h-[280px] flex flex-col justify-between relative shadow-2xl transition-all duration-300">
+                            <div class="flex items-center justify-between text-xs text-[#F3CE93]">
+                                <span id="jarNoteNumber" class="font-mono uppercase tracking-widest">FISILTI #1 / 100</span>
+                                <span id="jarNoteCategoryBadge" class="px-3 py-1 rounded-full bg-[#E5987F]/20 border border-[#F3CE93]/30 text-[#FBF4EB]">Şu An Yanında</span>
+                            </div>
+
+                            <div class="my-6">
+                                <p id="jarNoteText" class="font-serif text-2xl sm:text-3xl lg:text-4xl text-white leading-snug italic">
+                                    "Şu an başucunda oturup sadece sakin nefes alışverişini dinlemek bile dünyadaki en büyük huzur."
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-4 border-t border-white/10 text-xs text-[#E4D0C8]/80">
+                                <span>Elini hiç bırakmayan sevgilinden ♥</span>
+                                <div class="flex items-center gap-2">
+                                    <button onclick="prevJarNote()" class="p-2 rounded-lg bg-white/5 hover:bg-white/15 text-white transition">
+                                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                    </button>
+                                    <button onclick="nextJarNote()" class="p-2 rounded-lg bg-white/5 hover:bg-white/15 text-white transition">
+                                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             SECTION 9: SCENTED BEDSIDE CANDLES, SLEEP GUARD & BEDTIME STORIES
+             ====================================================== -->
+        <section id="mumlar-masal" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left: 5 Interactive Scented Candles & Screen Dimmer (5 cols) -->
+                <div class="lg:col-span-5 velvet-panel rounded-[2.2rem] p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] font-semibold">Kokulu Başucu Mumları</span>
+                        <h3 class="font-display text-2xl sm:text-3xl text-white font-light mt-1">
+                            Mumları Yak & <span class="italic text-[#E5987F]">Odayı Loşlaştır</span>
+                        </h3>
+                        <p class="font-serif text-sm text-[#E4D0C8]/85 mt-1">
+                            Üzerlerine dokunarak başucundaki kokulu mumları yakabilir veya söndürebilirsin.
+                        </p>
+
+                        <!-- 5 Interactive Candles Row -->
+                        <div id="candlesContainer" class="grid grid-cols-5 gap-2 my-6 pt-4">
+                            <!-- Populated by JS -->
+                        </div>
+                        <p id="candleScentStatus" class="text-xs text-center text-[#F3CE93] italic font-serif mb-6">
+                            "5 mum da yanıyor: Sıcak Kehribar, Sandal Ağacı, Vanilya, Lavanta ve Gece İnciri..."
+                        </p>
+                    </div>
+
+                    <!-- Screen Dimmer & Sleep Guard Timer -->
+                    <div class="space-y-4 pt-4 border-t border-white/10">
+                        <div class="bg-black/35 p-4 rounded-2xl border border-white/10">
+                            <div class="flex justify-between text-xs text-[#E4D0C8] mb-2">
+                                <span>Gece Loşluk Filtresi (Göz Dinlendirici)</span>
+                                <span id="dimmerValueLabel" class="font-mono text-[#F3CE93]">%0</span>
+                            </div>
+                            <input type="range" min="0" max="75" value="0" oninput="setScreenDimmer(this.value)" class="luxury-slider">
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <span id="sleepTimerStatus" class="text-xs text-[#E4D0C8]">🌙 Uyku nöbeti: Sabaha kadar yanındayım</span>
+                            <div class="flex gap-2">
+                                <button onclick="startSleepTimer(15)" class="px-3 py-1.5 rounded-xl bg-[#E5987F]/20 hover:bg-[#E5987F]/35 border border-[#F3CE93]/30 text-xs text-white transition">
+                                    15 Dk Uyku Modu
+                                </button>
+                                <button onclick="startSleepTimer(30)" class="px-3 py-1.5 rounded-xl bg-[#E5987F]/20 hover:bg-[#E5987F]/35 border border-[#F3CE93]/30 text-xs text-white transition">
+                                    30 Dk Uyku Modu
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Hands-Free Auto-Scrolling Bedtime Stories & Poetry (7 cols) -->
+                <div class="lg:col-span-7 velvet-panel rounded-[2.2rem] p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-4 border-b border-white/10">
+                            <div class="flex flex-wrap gap-2">
+                                <button onclick="switchStoryTab('masal', this)" class="story-tab-btn px-4 py-2 rounded-full text-xs font-semibold bg-[#F3CE93] text-[#120B16] transition">
+                                    📖 Gece Masalı
+                                </button>
+                                <button onclick="switchStoryTab('siir1', this)" class="story-tab-btn px-4 py-2 rounded-full text-xs font-medium bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">
+                                    ✨ Şiir: Başucundaki Nefes
+                                </button>
+                                <button onclick="switchStoryTab('siir2', this)" class="story-tab-btn px-4 py-2 rounded-full text-xs font-medium bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition">
+                                    🕯️ Şiir: Dokuz Kasım Saat On Bir
+                                </button>
+                            </div>
+
+                            <button onclick="toggleStoryAutoScroll()" class="px-3.5 py-2 rounded-full text-xs bg-[#E5987F]/20 border border-[#F3CE93]/35 text-[#F3CE93] hover:bg-[#E5987F]/35 transition flex items-center gap-1.5">
+                                <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                                <span id="autoScrollBtnText">Yavaşça Otomatik Kaydır</span>
+                            </button>
+                        </div>
+
+                        <div id="storyReaderBox" class="max-h-[340px] overflow-y-auto pr-3 space-y-4 text-[#FBF4EB] leading-relaxed scroll-smooth">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center pt-10 pb-14 border-t border-white/10">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#E5987F]/20 border border-[#F3CE93]/40 mb-4">
+                <i data-lucide="heart" class="w-6 h-6 text-[#F3CE93] animate-pulse"></i>
+            </div>
+            <h3 class="font-display italic text-3xl sm:text-4xl text-white font-light">
+                İyi geceler benim en kıymetli sığınağım...
+            </h3>
+            <p class="font-serif text-base sm:text-lg text-[#E4D0C8]/85 max-w-xl mx-auto mt-3 leading-relaxed">
+                Bu gece gözlerini kapattığın her saniye başucunda elini tutuyorum. 
+                Yarın <strong>9 Kasım 2026 saat 11:00</strong>'de ise seni gerçek kollarımın arasına alıp hiç bırakmayacağım. Seni çok seviyorum.
+            </p>
+        </footer>
+    </main>
+
+    <!-- ==========================================================
+         MODAL 1: LETTER READER
+         ========================================================== -->
+    <div id="letterModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="velvet-panel rounded-[2.2rem] max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 sm:p-10 border-2 border-[#F3CE93]/40 relative">
+            <button onclick="closeLetterModal()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="text-xs uppercase tracking-[0.2em] text-[#F3CE93] mb-2" id="modalEnvelopeTag">Mühürlü Zarf</div>
+            <h3 id="modalLetterTitle" class="font-display text-2xl sm:text-4xl text-white font-light pb-4 border-b border-white/10"></h3>
+            <div id="modalLetterBody" class="mt-6 space-y-4 font-serif text-lg sm:text-xl text-[#FBF4EB]/95 leading-relaxed"></div>
+            <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between">
+                <span class="font-display italic text-lg text-[#F3CE93]">Şu an tam başucunda olan sevgilin ♥</span>
+                <button onclick="closeLetterModal()" class="px-6 py-2.5 rounded-full bg-[#E5987F]/25 hover:bg-[#E5987F]/40 border border-[#F3CE93]/40 text-white text-xs transition">
+                    Kalbimde Sakla
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         MODAL 2: ALL 100 WHISPERS
+         ========================================================== -->
+    <div id="allNotesModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="velvet-panel rounded-[2.2rem] max-w-4xl w-full max-h-[88vh] flex flex-col p-6 sm:p-8 border border-[#F3CE93]/40">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div>
+                    <h3 class="font-display text-2xl sm:text-3xl text-white">100 Başucu Fısıltısının Tümü</h3>
+                    <p class="text-xs text-[#F3CE93]">Bu gece kulağına fısıldadığım her cümle</p>
+                </div>
+                <button onclick="toggleAllNotesModal()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="allNotesListContainer" class="mt-4 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 gap-3 pr-2"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         MASTER JAVASCRIPT & STUDIO POLYPHONIC WEB AUDIO ENGINE
+         ========================================================== -->
+    <script>
+        /* -----------------------------------------------------------
+           1. STUDIO-GRADE POLYPHONIC WEB AUDIO ENGINE WITH HALL REVERB
+        ----------------------------------------------------------- */
+        let audioCtx = null;
+        let masterMusicGain = null;
+        let reverbConvolver = null;
+        let analyserNode = null;
+        let currentTrackId = 'piano';
+        let isMusicPlaying = false;
+        let sequencerTimer = null;
+        let sequenceStep = 0;
+
+        const ambientState = {
+            rain: { active: false, volume: 0.45, nodes: null },
+            fire: { active: false, volume: 0.50, nodes: null },
+            purr: { active: false, volume: 0.55, nodes: null },
+            heart: { active: false, volume: 0.65, nodes: null }
+        };
+
+        /* Note Frequency Table (C2 to C6) */
+        const N = {
+            C2: 65.41, D2: 73.42, E2: 82.41, F2: 87.31, G2: 98.00, A2: 110.00, Bb2: 116.54, B2: 123.47,
+            C3: 130.81, D3: 146.83, E3: 164.81, F3: 174.61, G3: 196.00, A3: 220.00, Bb3: 233.08, B3: 246.94,
+            C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00, A4: 440.00, Bb4: 466.16, B4: 493.88,
+            C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99, A5: 880.00, Bb5: 932.33, B5: 987.77,
+            C6: 1046.50
+        };
+
+        function initAudioStudio() {
+            if (!audioCtx) {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioCtx();
+
+                // Master Music Gain
+                masterMusicGain = audioCtx.createGain();
+                masterMusicGain.gain.value = 0.70;
+
+                // Analyser for Real-Time Spectrum Canvas
+                analyserNode = audioCtx.createAnalyser();
+                analyserNode.fftSize = 128;
+
+                // Create Lush Algorithmic Concert Hall Reverb Impulse (3.2 seconds stereo tail)
+                reverbConvolver = audioCtx.createConvolver();
+                const rate = audioCtx.sampleRate;
+                const length = rate * 3.2;
+                const impulse = audioCtx.createBuffer(2, length, rate);
+                for (let ch = 0; ch < 2; ch++) {
+                    const data = impulse.getChannelData(ch);
+                    for (let i = 0; i < length; i++) {
+                        const decay = Math.pow(1 - i / length, 2.6);
+                        data[i] = (Math.random() * 2 - 1) * decay * 0.45;
+                    }
+                }
+                reverbConvolver.buffer = impulse;
+
+                // Dry + Wet Reverb Bus Routing
+                const wetGain = audioCtx.createGain();
+                wetGain.gain.value = 0.48;
+                const dryGain = audioCtx.createGain();
+                dryGain.gain.value = 0.75;
+
+                masterMusicGain.connect(dryGain);
+                masterMusicGain.connect(reverbConvolver);
+                reverbConvolver.connect(wetGain);
+
+                dryGain.connect(analyserNode);
+                wetGain.connect(analyserNode);
+                analyserNode.connect(audioCtx.destination);
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        /* -----------------------------------------------------------
+           INSTRUMENT 1: WARM FELT PIANO VOICE (Multi-harmonic + soft hammer)
+        ----------------------------------------------------------- */
+        function playFeltPianoVoice(freq, duration = 2.6, velocity = 0.16, delaySec = 0) {
+            if (!audioCtx || !freq) return;
+            const t = audioCtx.currentTime + delaySec;
+
+            // Warm fundamental + soft 2nd & 3rd harmonics
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            const osc3 = audioCtx.createOscillator();
+
+            osc1.type = 'sine';
+            osc1.frequency.setValueAtTime(freq, t);
+
+            osc2.type = 'triangle';
+            osc2.frequency.setValueAtTime(freq * 2, t);
+            osc2.detune.setValueAtTime(3, t); // Warm chorus detune
+
+            osc3.type = 'sine';
+            osc3.frequency.setValueAtTime(freq * 3, t);
+
+            const g1 = audioCtx.createGain();
+            const g2 = audioCtx.createGain();
+            const g3 = audioCtx.createGain();
+            g1.gain.value = 0.75;
+            g2.gain.value = 0.18;
+            g3.gain.value = 0.04;
+
+            // Warm Felt Lowpass Filter with key-tracking
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(Math.min(2200, freq * 3.8), t);
+            filter.frequency.exponentialRampToValueAtTime(Math.max(260, freq * 1.3), t + duration * 0.85);
+
+            const env = audioCtx.createGain();
+            env.gain.setValueAtTime(0.0001, t);
+            env.gain.linearRampToValueAtTime(velocity, t + 0.035); // Soft felt attack
+            env.gain.exponentialRampToValueAtTime(velocity * 0.45, t + 0.45);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+            osc1.connect(g1); osc2.connect(g2); osc3.connect(g3);
+            g1.connect(filter); g2.connect(filter); g3.connect(filter);
+            filter.connect(env);
+            env.connect(masterMusicGain);
+
+            osc1.start(t); osc2.start(t); osc3.start(t);
+            osc1.stop(t + duration + 0.05);
+            osc2.stop(t + duration + 0.05);
+            osc3.stop(t + duration + 0.05);
+        }
+
+        /* -----------------------------------------------------------
+           INSTRUMENT 2: ACOUSTIC FINGERSTYLE GUITAR & WARM BOWED CELLO
+        ----------------------------------------------------------- */
+        function playAcousticGuitarPluck(freq, duration = 2.2, velocity = 0.15, delaySec = 0) {
+            if (!audioCtx || !freq) return;
+            const t = audioCtx.currentTime + delaySec;
+
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            osc1.type = 'triangle';
+            osc2.type = 'sawtooth';
+            osc1.frequency.setValueAtTime(freq, t);
+            osc2.frequency.setValueAtTime(freq, t);
+            osc2.detune.setValueAtTime(-5, t);
+
+            const g2 = audioCtx.createGain();
+            g2.gain.value = 0.25;
+
+            // Plucked string filter envelope
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(freq * 6, t);
+            filter.frequency.exponentialRampToValueAtTime(freq * 1.4, t + 0.28);
+
+            const env = audioCtx.createGain();
+            env.gain.setValueAtTime(0.0001, t);
+            env.gain.linearRampToValueAtTime(velocity, t + 0.012);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+            osc1.connect(filter);
+            osc2.connect(g2);
+            g2.connect(filter);
+            filter.connect(env);
+            env.connect(masterMusicGain);
+
+            osc1.start(t); osc2.start(t);
+            osc1.stop(t + duration + 0.05);
+            osc2.stop(t + duration + 0.05);
+        }
+
+        function playBowedCelloNote(freq, duration = 3.6, velocity = 0.13) {
+            if (!audioCtx || !freq) return;
+            const t = audioCtx.currentTime;
+
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            osc1.type = 'sawtooth';
+            osc2.type = 'triangle';
+            osc1.frequency.setValueAtTime(freq, t);
+            osc2.frequency.setValueAtTime(freq * 1.002, t);
+
+            // Expressive Cello Vibrato LFO (5.2 Hz)
+            const lfo = audioCtx.createOscillator();
+            const lfoGain = audioCtx.createGain();
+            lfo.frequency.value = 5.2;
+            lfoGain.gain.value = 2.2;
+            lfo.connect(lfoGain);
+            lfoGain.connect(osc1.frequency);
+
+            // Warm wooden body filter
+            const bodyFilter = audioCtx.createBiquadFilter();
+            bodyFilter.type = 'lowpass';
+            bodyFilter.frequency.setValueAtTime(480, t);
+
+            const env = audioCtx.createGain();
+            env.gain.setValueAtTime(0.0001, t);
+            env.gain.linearRampToValueAtTime(velocity, t + 0.85); // Slow bow swell
+            env.gain.linearRampToValueAtTime(velocity * 0.8, t + duration * 0.7);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+            osc1.connect(bodyFilter);
+            osc2.connect(bodyFilter);
+            bodyFilter.connect(env);
+            env.connect(masterMusicGain);
+
+            osc1.start(t); osc2.start(t); lfo.start(t);
+            osc1.stop(t + duration + 0.1);
+            osc2.stop(t + duration + 0.1);
+            lfo.stop(t + duration + 0.1);
+        }
+
+        /* -----------------------------------------------------------
+           INSTRUMENT 3: CONCERT HARP, CELESTA & LUSH WARM ANALOG PAD
+        ----------------------------------------------------------- */
+        function playConcertHarpNote(freq, duration = 3.0, velocity = 0.14, delaySec = 0) {
+            if (!audioCtx || !freq) return;
+            const t = audioCtx.currentTime + delaySec;
+
+            const osc = audioCtx.createOscillator();
+            const bell = audioCtx.createOscillator();
+            osc.type = 'sine';
+            bell.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, t);
+            bell.frequency.setValueAtTime(freq * 4, t); // Crystalline overtone
+
+            const bellEnv = audioCtx.createGain();
+            bellEnv.gain.setValueAtTime(velocity * 0.18, t);
+            bellEnv.gain.exponentialRampToValueAtTime(0.0001, t + 0.35);
+
+            const env = audioCtx.createGain();
+            env.gain.setValueAtTime(0.0001, t);
+            env.gain.linearRampToValueAtTime(velocity, t + 0.018);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+            osc.connect(env);
+            bell.connect(bellEnv);
+            bellEnv.connect(env);
+            env.connect(masterMusicGain);
+
+            osc.start(t); bell.start(t);
+            osc.stop(t + duration + 0.05);
+            bell.stop(t + 0.4);
+        }
+
+        function playLushWarmPadChord(freqs, duration = 4.2, velocity = 0.055) {
+            if (!audioCtx) return;
+            const t = audioCtx.currentTime;
+            freqs.forEach(freq => {
+                const o1 = audioCtx.createOscillator();
+                const o2 = audioCtx.createOscillator();
+                o1.type = 'sine';
+                o2.type = 'triangle';
+                o1.frequency.setValueAtTime(freq, t);
+                o2.frequency.setValueAtTime(freq * 1.004, t);
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(520, t);
+
+                const env = audioCtx.createGain();
+                env.gain.setValueAtTime(0.0001, t);
+                env.gain.linearRampToValueAtTime(velocity, t + 1.4);
+                env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+                o1.connect(filter); o2.connect(filter);
+                filter.connect(env);
+                env.connect(masterMusicGain);
+
+                o1.start(t); o2.start(t);
+                o1.stop(t + duration + 0.1);
+                o2.stop(t + duration + 0.1);
+            });
+        }
+
+        /* -----------------------------------------------------------
+           INSTRUMENT 4: WARM RHODES ELECTRIC PIANO (TREMOLO JAZZ CHORDS)
+        ----------------------------------------------------------- */
+        function playRhodesVoice(freq, duration = 3.2, velocity = 0.11, delaySec = 0) {
+            if (!audioCtx || !freq) return;
+            const t = audioCtx.currentTime + delaySec;
+
+            const carrier = audioCtx.createOscillator();
+            const tine = audioCtx.createOscillator();
+            carrier.type = 'sine';
+            tine.type = 'sine';
+            carrier.frequency.setValueAtTime(freq, t);
+            tine.frequency.setValueAtTime(freq * 7, t); // Classic Rhodes tine bell harmonic
+
+            const tineGain = audioCtx.createGain();
+            tineGain.gain.setValueAtTime(velocity * 0.12, t);
+            tineGain.gain.exponentialRampToValueAtTime(0.0001, t + 0.22);
+
+            const env = audioCtx.createGain();
+            env.gain.setValueAtTime(0.0001, t);
+            env.gain.linearRampToValueAtTime(velocity, t + 0.025);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+
+            carrier.connect(env);
+            tine.connect(tineGain);
+            tineGain.connect(env);
+            env.connect(masterMusicGain);
+
+            carrier.start(t); tine.start(t);
+            carrier.stop(t + duration + 0.05);
+            tine.stop(t + 0.3);
+        }
+
+        /* -----------------------------------------------------------
+           4 COMPLETE MULTI-BAR MUSICAL COMPOSITIONS (SEQUENCER SCORE)
+        ----------------------------------------------------------- */
+        // Composition 1: "Gece Yarısı Keçe Piyano Noktürnü" (8 lush bars in D minor / F major)
+        const pianoScore = [
+            { arp: [N.D3, N.A3, N.D4, N.F4], mel: [N.A4, N.F4], melDelay: [0, 1.8] },
+            { arp: [N.Bb2, N.F3, N.Bb3, N.D4], mel: [N.G4, N.F4, N.E4], melDelay: [0, 1.2, 2.4] },
+            { arp: [N.F2, N.C3, N.F3, N.A3], mel: [N.F4, N.C5], melDelay: [0, 1.8] },
+            { arp: [N.C3, N.G3, N.C4, N.E4], mel: [N.G4, N.E4], melDelay: [0, 1.8] },
+            { arp: [N.G2, N.D3, N.G3, N.Bb3], mel: [N.D5, N.C5, N.Bb4], melDelay: [0, 1.2, 2.4] },
+            { arp: [N.D3, N.A3, N.D4, N.F4], mel: [N.A4, N.F4], melDelay: [0, 1.8] },
+            { arp: [N.Bb2, N.F3, N.Bb3, N.D4], mel: [N.G4, N.F4], melDelay: [0, 1.8] },
+            { arp: [N.A2, N.E3, N.A3, N.C4], mel: [N.E4, N.D4], melDelay: [0, 1.8] }
+        ];
+
+        // Composition 2: "Yağmurlu Pencerede Akustik Gitar & Çello"
+        const guitarScore = [
+            { cello: N.A2, picks: [N.A3, N.E4, N.A4, N.C5, N.E4, N.A4] },
+            { cello: N.F2, picks: [N.F3, N.C4, N.F4, N.A4, N.C4, N.F4] },
+            { cello: N.C3, picks: [N.C3, N.G3, N.C4, N.E4, N.G4, N.C4] },
+            { cello: N.G2, picks: [N.G2, N.D3, N.G3, N.B3, N.D4, N.G3] },
+            { cello: N.D3, picks: [N.D3, N.A3, N.D4, N.F4, N.A4, N.D4] },
+            { cello: N.A2, picks: [N.A2, N.E3, N.A3, N.C4, N.E4, N.A3] },
+            { cello: N.F2, picks: [N.F2, N.C3, N.F3, N.A3, N.C4, N.E4] },
+            { cello: N.E2, picks: [N.E2, N.B2, N.E3, N.G3, N.B3, N.E4] }
+        ];
+
+        // Composition 3: "Konser Arpı, Yıldız Celesta & Sıcak Pad"
+        const harpScore = [
+            { pad: [N.F3, N.A3, N.C4, N.E4], harp: [N.F4, N.A4, N.C5, N.E5, N.G5, N.E5] },
+            { pad: [N.D3, N.F3, N.A3, N.C4], harp: [N.D4, N.F4, N.A4, N.C5, N.F5, N.D5] },
+            { pad: [N.Bb2, N.D3, N.F3, N.A3], harp: [N.Bb3, N.D4, N.F4, N.A4, N.D5, N.C5] },
+            { pad: [N.C3, N.E3, N.G3, N.B3], harp: [N.C4, N.E4, N.G4, N.C5, N.E5, N.C5] }
+        ];
+
+        // Composition 4: "Lo-Fi Kaset & Sıcak Rhodes Elektrik Piyano"
+        const lofiScore = [
+            { bass: N.F2, chord: [N.F3, N.A3, N.C4, N.E4, N.G4], lick: [N.A4, N.G4, N.E4] },
+            { bass: N.E2, chord: [N.E3, N.G3, N.B3, N.D4, N.G4], lick: [N.G4, N.E4, N.D4] },
+            { bass: N.D2, chord: [N.D3, N.F3, N.A3, N.C4, N.E4], lick: [N.F4, N.E4, N.C4] },
+            { bass: N.C2, chord: [N.C3, N.E3, N.G3, N.B3, N.D4], lick: [N.E4, N.D4, N.C4] }
+        ];
+
+        function executeMusicalBar() {
+            if (!isMusicPlaying || !audioCtx) return;
+
+            if (currentTrackId === 'piano') {
+                const bar = pianoScore[sequenceStep % pianoScore.length];
+                // Left hand broken arpeggio
+                bar.arp.forEach((note, idx) => {
+                    playFeltPianoVoice(note, 3.0, 0.12, idx * 0.48);
+                });
+                // Right hand lyrical melody
+                bar.mel.forEach((note, idx) => {
+                    playFeltPianoVoice(note, 3.2, 0.18, bar.melDelay[idx] + 0.15);
+                });
+            } else if (currentTrackId === 'guitar') {
+                const bar = guitarScore[sequenceStep % guitarScore.length];
+                // Sustained warm cello bass
+                playBowedCelloNote(bar.cello, 3.7, 0.11);
+                // Fingerstyle 6/8 guitar pattern
+                bar.picks.forEach((note, idx) => {
+                    playAcousticGuitarPluck(note, 2.4, idx === 0 ? 0.16 : 0.12, idx * 0.56);
+                });
+            } else if (currentTrackId === 'harp') {
+                const bar = harpScore[sequenceStep % harpScore.length];
+                playLushWarmPadChord(bar.pad, 4.0, 0.05);
+                bar.harp.forEach((note, idx) => {
+                    playConcertHarpNote(note, 3.1, 0.13, idx * 0.55);
+                });
+            } else if (currentTrackId === 'lofi') {
+                const bar = lofiScore[sequenceStep % lofiScore.length];
+                // Warm sub bass
+                playFeltPianoVoice(bar.bass, 3.6, 0.20, 0);
+                // Rolled Rhodes jazz 9th chord
+                bar.chord.forEach((note, idx) => {
+                    playRhodesVoice(note, 3.4, 0.09, idx * 0.08);
+                });
+                // Late night Rhodes melody notes
+                bar.lick.forEach((note, idx) => {
+                    playRhodesVoice(note, 2.2, 0.12, 1.5 + idx * 0.65);
+                });
+            }
+
+            sequenceStep++;
+        }
+
+        function startMasterSequencer() {
+            initAudioStudio();
+            if (sequencerTimer) clearInterval(sequencerTimer);
+            isMusicPlaying = true;
+            executeMusicalBar();
+            sequencerTimer = setInterval(executeMusicalBar, 3600);
+            updateVinylAndHeaderUI();
+        }
+
+        function pauseMasterSequencer() {
+            isMusicPlaying = false;
+            if (sequencerTimer) {
+                clearInterval(sequencerTimer);
+                sequencerTimer = null;
+            }
+            updateVinylAndHeaderUI();
+        }
+
+        function toggleMasterMusic() {
+            if (isMusicPlaying) {
+                pauseMasterSequencer();
+            } else {
+                startMasterSequencer();
+            }
+        }
+
+        function selectMusicalComposition(trackId) {
+            currentTrackId = trackId;
+            sequenceStep = 0;
+
+            document.querySelectorAll('.track-card').forEach(btn => {
+                btn.classList.remove('border-[#F3CE93]/60', 'bg-[#E5987F]/15');
+                btn.classList.add('border-white/10');
+            });
+            const activeBtn = document.getElementById(`track-btn-${trackId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-white/10');
+                activeBtn.classList.add('border-[#F3CE93]/60', 'bg-[#E5987F]/15');
+            }
+
+            const titles = {
+                piano: { side: 'PLAK #1', title: 'Keçe Piyano Noktürnü', banner: 'Çalıyor: Gece Yarısı Keçe Piyano Noktürnü (Çok Sesli)' },
+                guitar: { side: 'PLAK #2', title: 'Akustik Gitar & Çello', banner: 'Çalıyor: Yağmurlu Pencerede Akustik Gitar & Sıcak Çello' },
+                harp: { side: 'PLAK #3', title: 'Konser Arpı & Celesta', banner: 'Çalıyor: Yıldız Tozu Celesta, Arp & Sıcak Pad' },
+                lofi: { side: 'PLAK #4', title: 'Sıcak Rhodes Kaseti', banner: 'Çalıyor: Lo-Fi Rhodes Elektrik Piyano & Derin Bas' }
+            };
+
+            document.getElementById('vinylLabelSide').textContent = titles[trackId].side;
+            document.getElementById('vinylLabelTitle').textContent = titles[trackId].title;
+            document.getElementById('nowPlayingBanner').textContent = titles[trackId].banner;
+
+            startMasterSequencer();
+        }
+
+        function setMasterMusicVolume(val) {
+            if (masterMusicGain) {
+                masterMusicGain.gain.value = (val / 100) * 0.9;
+            }
+        }
+
+        function updateVinylAndHeaderUI() {
+            const vinyl = document.getElementById('vinylRecordEl');
+            const tonearm = document.getElementById('tonearmSvg');
+            const glow = document.getElementById('vinylGlow');
+            const headerTxt = document.getElementById('headerMusicText');
+            const banner = document.getElementById('nowPlayingBanner');
+
+            if (isMusicPlaying) {
+                vinyl.classList.remove('vinyl-paused');
+                tonearm.style.transform = 'rotate(4deg)';
+                glow.classList.remove('opacity-40');
+                glow.classList.add('opacity-95');
+                headerTxt.textContent = 'Plak Çalıyor ♥';
+            } else {
+                vinyl.classList.add('vinyl-paused');
+                tonearm.style.transform = 'rotate(-28deg)';
+                glow.classList.remove('opacity-95');
+                glow.classList.add('opacity-40');
+                headerTxt.textContent = 'Plağın Sesi Kapalı';
+                banner.textContent = 'Plak duraklatıldı — başlatmak için plağa dokun...';
+            }
+        }
+
+        /* -----------------------------------------------------------
+           2. 4 DISTINCT ATMOSPHERIC SOUNDSCAPE GENERATORS
+        ----------------------------------------------------------- */
+        function createRainLayer() {
+            initAudioStudio();
+            const bufSize = audioCtx.sampleRate * 3;
+            const buf = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+            const data = buf.getChannelData(0);
+            let b0 = 0, b1 = 0, b2 = 0;
+            for (let i = 0; i < bufSize; i++) {
+                const white = Math.random() * 2 - 1;
+                b0 = 0.997 * b0 + white * 0.029;
+                b1 = 0.985 * b1 + white * 0.048;
+                b2 = 0.940 * b2 + white * 0.085;
+                data[i] = (b0 + b1 + b2) * 0.14;
+            }
+            const src = audioCtx.createBufferSource();
+            src.buffer = buf;
+            src.loop = true;
+
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.value = 680;
+
+            const gain = audioCtx.createGain();
+            gain.gain.value = ambientState.rain.volume * 0.5;
+
+            src.connect(filter);
+            filter.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+
+            // Gentle water droplets on window sill
+            const dropInterval = setInterval(() => {
+                if (!ambientState.rain.active) return;
+                if (Math.random() > 0.45) {
+                    const f = 900 + Math.random() * 700;
+                    const osc = audioCtx.createOscillator();
+                    const g = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(f * 1.35, audioCtx.currentTime + 0.06);
+                    g.gain.setValueAtTime(ambientState.rain.volume * 0.03, audioCtx.currentTime);
+                    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.08);
+                    osc.connect(g);
+                    g.connect(reverbConvolver);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.09);
+                }
+            }, 420);
+
+            return { src, gain, intervalId: dropInterval };
+        }
+
+        function createFireplaceLayer() {
+            initAudioStudio();
+            // Warm hearth low ember hum
+            const bufSize = audioCtx.sampleRate * 2;
+            const buf = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+            const data = buf.getChannelData(0);
+            let last = 0;
+            for (let i = 0; i < bufSize; i++) {
+                const w = Math.random() * 2 - 1;
+                last = (last + 0.02 * w) / 1.02;
+                data[i] = last * 0.4;
+            }
+            const src = audioCtx.createBufferSource();
+            src.buffer = buf;
+            src.loop = true;
+
+            const lowFilter = audioCtx.createBiquadFilter();
+            lowFilter.type = 'lowpass';
+            lowFilter.frequency.value = 180;
+
+            const gain = audioCtx.createGain();
+            gain.gain.value = ambientState.fire.volume * 0.6;
+
+            src.connect(lowFilter);
+            lowFilter.connect(gain);
+            gain.connect(audioCtx.destination);
+            src.start();
+
+            // Realistic wood crackles & pops
+            const crackleInterval = setInterval(() => {
+                if (!ambientState.fire.active) return;
+                if (Math.random() > 0.3) {
+                    const t = audioCtx.currentTime;
+                    const cBuf = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.04, audioCtx.sampleRate);
+                    const cData = cBuf.getChannelData(0);
+                    for (let i = 0; i < cData.length; i++) {
+                        cData[i] = (Math.random() * 2 - 1) * Math.exp(-i / (audioCtx.sampleRate * 0.008));
+                    }
+                    const cSrc = audioCtx.createBufferSource();
+                    cSrc.buffer = cBuf;
+
+                    const bp = audioCtx.createBiquadFilter();
+                    bp.type = 'bandpass';
+                    bp.frequency.value = 1600 + Math.random() * 1400;
+                    bp.Q.value = 3.0;
+
+                    const cg = audioCtx.createGain();
+                    cg.gain.value = ambientState.fire.volume * 0.25;
+
+                    cSrc.connect(bp);
+                    bp.connect(cg);
+                    cg.connect(audioCtx.destination);
+                    cSrc.start(t);
+                }
+            }, 240);
+
+            return { src, gain, intervalId: crackleInterval };
+        }
+
+        function createCatPurrLayer() {
+            initAudioStudio();
+            // Authentic 26Hz + 52Hz purr oscillator modulated by breathing LFO (0.22Hz inhale/exhale)
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            osc1.type = 'sawtooth';
+            osc2.type = 'triangle';
+            osc1.frequency.value = 26.5;
+            osc2.frequency.value = 53.0;
+
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.value = 115;
+
+            const breathLfo = audioCtx.createOscillator();
+            breathLfo.type = 'sine';
+            breathLfo.frequency.value = 0.28; // Cozy breathing cycle
+
+            const lfoScale = audioCtx.createGain();
+            lfoScale.gain.value = 0.08;
+
+            const gain = audioCtx.createGain();
+            gain.gain.value = ambientState.purr.volume * 0.18;
+
+            breathLfo.connect(lfoScale);
+            lfoScale.connect(gain.gain);
+
+            osc1.connect(filter);
+            osc2.connect(filter);
+            filter.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc1.start();
+            osc2.start();
+            breathLfo.start();
+
+            return { osc1, osc2, breathLfo, gain };
+        }
+
+        function triggerRealisticHeartbeat(vol = 0.5) {
+            initAudioStudio();
+            const now = audioCtx.currentTime;
+            playHeartPulse(now, 56, 34, vol * 0.35);
+            playHeartPulse(now + 0.29, 48, 30, vol * 0.22);
+        }
+
+        function playHeartPulse(t, fStart, fEnd, peak) {
+            const osc = audioCtx.createOscillator();
+            const filter = audioCtx.createBiquadFilter();
+            const g = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(fStart, t);
+            osc.frequency.exponentialRampToValueAtTime(fEnd, t + 0.18);
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(95, t);
+            g.gain.setValueAtTime(0.0001, t);
+            g.gain.linearRampToValueAtTime(peak, t + 0.035);
+            g.gain.exponentialRampToValueAtTime(0.0001, t + 0.24);
+            osc.connect(filter);
+            filter.connect(g);
+            g.connect(audioCtx.destination);
+            osc.start(t);
+            osc.stop(t + 0.26);
+        }
+
+        function createHeartbeatLayer() {
+            triggerRealisticHeartbeat(ambientState.heart.volume);
+            const intervalId = setInterval(() => {
+                if (ambientState.heart.active) {
+                    triggerRealisticHeartbeat(ambientState.heart.volume);
+                }
+            }, 1070); // 56 BPM
+            return { intervalId };
+        }
+
+        function toggleAmbientLayer(key) {
+            const state = ambientState[key];
+            const statusEl = document.getElementById(`amb-status-${key}`);
+            const btnEl = document.getElementById(`amb-btn-${key}`);
+
+            if (state.active) {
+                state.active = false;
+                if (state.nodes) {
+                    if (state.nodes.src) state.nodes.src.stop();
+                    if (state.nodes.osc1) { state.nodes.osc1.stop(); state.nodes.osc2.stop(); state.nodes.breathLfo.stop(); }
+                    if (state.nodes.intervalId) clearInterval(state.nodes.intervalId);
+                    state.nodes = null;
+                }
+                statusEl.textContent = 'Kapalı';
+                statusEl.className = 'text-[10px] text-[#E4D0C8]/60';
+                btnEl.parentElement.parentElement.classList.remove('border-[#F3CE93]/50');
+            } else {
+                state.active = true;
+                if (key === 'rain') state.nodes = createRainLayer();
+                if (key === 'fire') state.nodes = createFireplaceLayer();
+                if (key === 'purr') state.nodes = createCatPurrLayer();
+                if (key === 'heart') state.nodes = createHeartbeatLayer();
+
+                statusEl.textContent = 'Açık ♥';
+                statusEl.className = 'text-[10px] text-[#F3CE93] font-semibold';
+                btnEl.parentElement.parentElement.classList.add('border-[#F3CE93]/50');
+            }
+        }
+
+        function setAmbientVolume(key, val) {
+            ambientState[key].volume = val / 100;
+            const n = ambientState[key].nodes;
+            if (n && n.gain) {
+                if (key === 'rain') n.gain.gain.value = ambientState.rain.volume * 0.5;
+                if (key === 'fire') n.gain.gain.value = ambientState.fire.volume * 0.6;
+                if (key === 'purr') n.gain.gain.value = ambientState.purr.volume * 0.18;
+            }
+        }
+
+        function stopAllAudioEngine() {
+            pauseMasterSequencer();
+            ['rain', 'fire', 'purr', 'heart'].forEach(k => {
+                if (ambientState[k].active) toggleAmbientLayer(k);
+            });
+        }
+
+        /* Distinct Micro-Interaction Acoustic Sounds */
+        function playPorcelainSpoonClink() {
+            initAudioStudio();
+            // High crystalline porcelain ping (two inharmonic bell frequencies)
+            const t = audioCtx.currentTime;
+            [2180, 3420].forEach((freq, i) => {
+                const osc = audioCtx.createOscillator();
+                const g = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, t + i * 0.06);
+                g.gain.setValueAtTime(0.06, t + i * 0.06);
+                g.gain.exponentialRampToValueAtTime(0.0001, t + i * 0.06 + 0.45);
+                osc.connect(g);
+                g.connect(reverbConvolver);
+                osc.start(t + i * 0.06);
+                osc.stop(t + i * 0.06 + 0.5);
+            });
+        }
+
+        function playSingingBowlHarmonic(freq) {
+            initAudioStudio();
+            const t = audioCtx.currentTime;
+            const o1 = audioCtx.createOscillator();
+            const o2 = audioCtx.createOscillator();
+            o1.type = 'sine';
+            o2.type = 'sine';
+            o1.frequency.setValueAtTime(freq, t);
+            o2.frequency.setValueAtTime(freq * 2.756, t); // Singing bowl overtone ratio
+
+            const g = audioCtx.createGain();
+            g.gain.setValueAtTime(0.0001, t);
+            g.gain.linearRampToValueAtTime(0.09, t + 0.08);
+            g.gain.exponentialRampToValueAtTime(0.0001, t + 3.4);
+
+            const g2 = audioCtx.createGain();
+            g2.gain.value = 0.15;
+
+            o1.connect(g);
+            o2.connect(g2);
+            g2.connect(g);
+            g.connect(masterMusicGain);
+
+            o1.start(t); o2.start(t);
+            o1.stop(t + 3.5); o2.stop(t + 3.5);
+        }
+
+        /* Real-Time Spectrum Visualizer Canvas Loop */
+        const specCanvas = document.getElementById('audioSpectrumCanvas');
+        const specCtx = specCanvas.getContext('2d');
+        function drawAudioSpectrum() {
+            const w = specCanvas.width = specCanvas.clientWidth;
+            const h = specCanvas.height = specCanvas.clientHeight;
+            specCtx.clearRect(0, 0, w, h);
+
+            const barCount = 32;
+            const barWidth = (w / barCount) - 3;
+
+            if (analyserNode && (isMusicPlaying || Object.values(ambientState).some(s => s.active))) {
+                const data = new Uint8Array(analyserNode.frequencyBinCount);
+                analyserNode.getByteFrequencyData(data);
+                for (let i = 0; i < barCount; i++) {
+                    const val = data[i] || 8;
+                    const barHeight = Math.max(4, (val / 255) * h * 0.9);
+                    const x = i * (barWidth + 3);
+                    const y = h - barHeight;
+                    const grad = specCtx.createLinearGradient(0, h, 0, 0);
+                    grad.addColorStop(0, '#E5987F');
+                    grad.addColorStop(1, '#F3CE93');
+                    specCtx.fillStyle = grad;
+                    specCtx.beginPath();
+                    specCtx.roundRect(x, y, barWidth, barHeight, 3);
+                    specCtx.fill();
+                }
+            } else {
+                // Gentle idle breathing wave
+                const time = Date.now() * 0.002;
+                for (let i = 0; i < barCount; i++) {
+                    const barHeight = 4 + Math.sin(time + i * 0.3) * 3;
+                    const x = i * (barWidth + 3);
+                    specCtx.fillStyle = 'rgba(243, 206, 147, 0.22)';
+                    specCtx.beginPath();
+                    specCtx.roundRect(x, h - barHeight, barWidth, barHeight, 2);
+                    specCtx.fill();
+                }
+            }
+            requestAnimationFrame(drawAudioSpectrum);
+        }
+
+        /* Welcome Curtain Actions */
+        function enterSanctuaryWithMusic() {
+            const curtain = document.getElementById('welcomeCurtain');
+            curtain.classList.add('opacity-0', 'pointer-events-none');
+            selectMusicalComposition('piano');
+            toggleAmbientLayer('rain');
+            setTimeout(() => curtain.remove(), 1000);
+        }
+
+        function enterSanctuarySilent() {
+            const curtain = document.getElementById('welcomeCurtain');
+            curtain.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => curtain.remove(), 1000);
+        }
+
+        /* -----------------------------------------------------------
+           3. THEME SWITCHER & BEDSIDE SCENES
+        ----------------------------------------------------------- */
+        function switchTheme(themeName, btnEl) {
+            document.body.setAttribute('data-theme', themeName);
+            document.querySelectorAll('.theme-pill').forEach(b => {
+                b.className = 'theme-pill px-2.5 py-1 rounded-full text-[11px] text-[#E4D0C8] hover:text-white transition';
+            });
+            btnEl.className = 'theme-pill px-2.5 py-1 rounded-full text-[11px] bg-[#E5987F] text-[#120B16] font-semibold transition';
+            playConcertHarpNote(N.F5, 2.0, 0.1);
+        }
+
+        const bedsideScenes = [
+            {
+                title: `"Yorganını omuzlarına örtüp soğuk ellerini iki avucumun arasına aldım..."`,
+                desc: "Odanın içinde sadece mum ışığı ve dışarıdaki gecenin dinginliği var. Başparmağımla elinin üstünü yavaşça okşarken üzerindeki bütün ağırlık eriyip gidiyor. Sabaha kadar buradayım."
+            },
+            {
+                title: `"Parmaklarımı saçlarının arasından yavaşça geçirip alnını öpüyorum..."`,
+                desc: "Göz kapakların ağırlaştıkça nefesin derinleşiyor. Hiçbir şey düşünmene, hiçbir yere yetişmene gerek yok; bu gece senin dinlenmenden daha önemli hiçbir şey yok."
+            },
+            {
+                title: `"Başını göğsüme yasladın, kalp atışımın ritmini dinliyorsun..."`,
+                desc: "Dış dünyadaki bütün sesler kapandı. Sadece ikimizin sakin nefesi, mumların sıcak ışığı ve seni sarmalayan kollarımın güveni var."
+            },
+            {
+                title: `"Avucumu karnının ve belinin üzerine koyup sızını ısıtıyorum..."`,
+                desc: "Elimin sıcaklığı bedenindeki bütün kasılmayı ve yorgunluğu pamuk gibi yumuşatıyor. Çok güvendesin benim güzel sevgilim."
+            }
+        ];
+        let sceneIdx = 0;
+
+        function nextBedsideScene() {
+            sceneIdx = (sceneIdx + 1) % bedsideScenes.length;
+            document.getElementById('sceneTitle').textContent = bedsideScenes[sceneIdx].title;
+            document.getElementById('sceneDescription').textContent = bedsideScenes[sceneIdx].desc;
+            playConcertHarpNote(N.A4, 2.2, 0.12);
+        }
+
+        function setBedsideMood(type) {
+            const moods = {
+                embrace: {
+                    title: `"Kollarım şu an seni dış dünyadan koruyan sıcacık bir kale..."`,
+                    desc: "Bütün ağırlığını bana bırak güzelim. Çenemi saçlarının üstüne dayadım, kalp atışımın ritmiyle huzurla gevşeyebilirsin."
+                },
+                warmth: {
+                    title: `"Üşüyen ellerin ve bedenin şu an avuçlarımın içinde ısınıyor..."`,
+                    desc: "Sırtına ve omuzlarına en yumuşak kaşmir battaniyeyi sardım. Ellerimin sıcaklığıyla içindeki bütün üşüme ve gerginlik eriyip gidiyor."
+                },
+                hair: {
+                    title: `"Sen uykuya dalana kadar parmaklarım saçlarında dolaşıyor..."`,
+                    desc: "Başını yastığa tamamen bırak. Saçlarının her bir telini şefkatle okşarken göz kapakların tatlı bir uykuya doğru ağırlaşıyor."
+                }
+            };
+            if (moods[type]) {
+                document.getElementById('sceneTitle').textContent = moods[type].title;
+                document.getElementById('sceneDescription').textContent = moods[type].desc;
+                playConcertHarpNote(N.C5, 2.4, 0.12);
+            }
+        }
+
+        let cashmereActive = false;
+        function toggleCashmereBlanket() {
+            cashmereActive = !cashmereActive;
+            const ov = document.getElementById('cashmereBlanketOverlay');
+            const lbl = document.getElementById('blanketToggleLabel');
+            if (cashmereActive) {
+                ov.classList.remove('opacity-0');
+                ov.classList.add('opacity-100');
+                lbl.textContent = 'Kaşmir Battaniye Sarılı ♥';
+                playSingingBowlHarmonic(N.F4);
+            } else {
+                ov.classList.remove('opacity-100');
+                ov.classList.add('opacity-0');
+                lbl.textContent = 'Kaşmir Battaniyeyi Sar';
+            }
+        }
+
+        /* -----------------------------------------------------------
+           4. ARCHED BEDSIDE WINDOW CANVAS & 11:00 COUNTDOWN
+        ----------------------------------------------------------- */
+        const winCanvas = document.getElementById('windowPaneCanvas');
+        const winCtx = winCanvas.getContext('2d');
+        let winStars = [];
+        let shootingStars = [];
+        let windowRaindrops = [];
+
+        function initWindowCanvas() {
+            winCanvas.width = winCanvas.clientWidth || 360;
+            winCanvas.height = winCanvas.clientHeight || 280;
+            winStars = [];
+            for (let i = 0; i < 45; i++) {
+                winStars.push({
+                    x: Math.random() * winCanvas.width,
+                    y: Math.random() * (winCanvas.height * 0.75),
+                    r: Math.random() * 1.4 + 0.4,
+                    alpha: Math.random() * 0.7 + 0.2,
+                    speed: (Math.random() * 0.015 + 0.005) * (Math.random() < 0.5 ? 1 : -1)
+                });
+            }
+            windowRaindrops = [];
+            for (let i = 0; i < 22; i++) {
+                windowRaindrops.push({
+                    x: Math.random() * winCanvas.width,
+                    y: Math.random() * winCanvas.height,
+                    len: Math.random() * 10 + 6,
+                    vy: Math.random() * 2.2 + 1.5
+                });
+            }
+        }
+
+        function triggerWindowShootingStar() {
+            shootingStars.push({
+                x: Math.random() * (winCanvas.width * 0.6) + 20,
+                y: Math.random() * 60 + 20,
+                vx: 4.5,
+                vy: 2.2,
+                alpha: 1.0
+            });
+            playConcertHarpNote(N.E5, 2.5, 0.12);
+            playConcertHarpNote(N.A5, 2.8, 0.10, 0.12);
+        }
+
+        function drawWindowScene() {
+            const w = winCanvas.width;
+            const h = winCanvas.height;
+            winCtx.clearRect(0, 0, w, h);
+
+            // Crescent Moon Glow
+            const moonGrad = winCtx.createRadialGradient(w * 0.74, h * 0.26, 4, w * 0.74, h * 0.26, 48);
+            moonGrad.addColorStop(0, 'rgba(243, 206, 147, 0.45)');
+            moonGrad.addColorStop(1, 'rgba(243, 206, 147, 0)');
+            winCtx.fillStyle = moonGrad;
+            winCtx.beginPath();
+            winCtx.arc(w * 0.74, h * 0.26, 48, 0, Math.PI * 2);
+            winCtx.fill();
+
+            // Crescent Moon Body
+            winCtx.fillStyle = '#FBF4EB';
+            winCtx.beginPath();
+            winCtx.arc(w * 0.74, h * 0.26, 16, 0, Math.PI * 2);
+            winCtx.fill();
+            winCtx.fillStyle = '#120C1C';
+            winCtx.beginPath();
+            winCtx.arc(w * 0.74 - 6, h * 0.26 - 3, 14, 0, Math.PI * 2);
+            winCtx.fill();
+
+            // Twinkling Stars
+            for (let s of winStars) {
+                s.alpha += s.speed;
+                if (s.alpha > 0.9 || s.alpha < 0.15) s.speed *= -1;
+                winCtx.fillStyle = `rgba(251, 244, 235, ${s.alpha})`;
+                winCtx.beginPath();
+                winCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                winCtx.fill();
+            }
+
+            // Shooting Stars
+            for (let i = shootingStars.length - 1; i >= 0; i--) {
+                const st = shootingStars[i];
+                st.x += st.vx;
+                st.y += st.vy;
+                st.alpha -= 0.022;
+                if (st.alpha <= 0) {
+                    shootingStars.splice(i, 1);
+                    continue;
+                }
+                winCtx.strokeStyle = `rgba(243, 206, 147, ${st.alpha})`;
+                winCtx.lineWidth = 2;
+                winCtx.beginPath();
+                winCtx.moveTo(st.x, st.y);
+                winCtx.lineTo(st.x - st.vx * 5, st.y - st.vy * 5);
+                winCtx.stroke();
+            }
+
+            // Raindrops on Window (visible especially when rain ambient is active, or subtle)
+            const rainOpacity = ambientState.rain.active ? 0.45 : 0.12;
+            winCtx.strokeStyle = `rgba(228, 208, 200, ${rainOpacity})`;
+            winCtx.lineWidth = 1.2;
+            for (let r of windowRaindrops) {
+                r.y += r.vy * (ambientState.rain.active ? 1.6 : 0.5);
+                if (r.y > h) {
+                    r.y = -10;
+                    r.x = Math.random() * w;
+                }
+                winCtx.beginPath();
+                winCtx.moveTo(r.x, r.y);
+                winCtx.lineTo(r.x - 1, r.y + r.len);
+                winCtx.stroke();
+            }
+
+            requestAnimationFrame(drawWindowScene);
+        }
+
+        /* Countdown to Nov 9, 2026 11:00 */
+        const meetupTime = new Date('2026-11-09T11:00:00+03:00').getTime();
+        function updateCountdownClock() {
+            const now = new Date();
+            const hh = String(now.getHours()).padStart(2, '0');
+            const mm = String(now.getMinutes()).padStart(2, '0');
+            document.getElementById('liveClockBadge').textContent = `Şu An Saat ${hh}:${mm} • Başucunda Nöbetteyim`;
+
+            const diff = meetupTime - now.getTime();
+            if (diff <= 0) {
+                document.getElementById('cd-days').textContent = '00';
+                document.getElementById('cd-hours').textContent = '00';
+                document.getElementById('cd-minutes').textContent = '00';
+                document.getElementById('cd-seconds').textContent = '00';
+                document.getElementById('countdownSubtext').textContent = '"Saat 11:00 oldu sevgilim! Şimdi gerçek kollarımın arasındasın ♥"';
+                return;
+            }
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+            document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+            document.getElementById('cd-minutes').textContent = String(m).padStart(2, '0');
+            document.getElementById('cd-seconds').textContent = String(s).padStart(2, '0');
+        }
+        setInterval(updateCountdownClock, 1000);
+        updateCountdownClock();
+
+        /* -----------------------------------------------------------
+           5. HERBAL TEA BREWING RITUAL
+        ----------------------------------------------------------- */
+        let sipCount = 0;
+        const sipWhispers = [
+            "Sıcak yudum boğazından süzülürken omuzlarının biraz daha gevşediğini hisset...",
+            "Karnındaki ve bedenindeki bütün yorgunluk bu ılık buharla birlikte dağılıyor...",
+            "Fincanı tutan ellerini kendi avuçlarımın içinde ısıtıyorum güzelim...",
+            "Her yudumda sabaha biraz daha dinlenmiş ve huzurlu yaklaşıyorsun..."
+        ];
+
+        function brewTeaIngredient(id, title, hexColor, message) {
+            playPorcelainSpoonClink();
+            document.getElementById('teaLiquidSurface').setAttribute('fill', hexColor);
+            document.getElementById('activeTeaTitle').textContent = `Fincanında: ${title}`;
+            document.getElementById('activeTeaWhisper').textContent = `"${message}"`;
+            spawnSparkParticle('🍵');
+        }
+
+        function sipHerbalTea() {
+            sipCount++;
+            document.getElementById('sipCountText').textContent = sipCount;
+            playPorcelainSpoonClink();
+            playSingingBowlHarmonic(N.F4);
+            document.getElementById('activeTeaWhisper').textContent = `"${sipWhispers[sipCount % sipWhispers.length]}"`;
+            spawnSparkParticle('✨');
+        }
+
+        /* -----------------------------------------------------------
+           6. LUMINOUS BOTANICAL CONSERVATORY & HARP CHORDS
+        ----------------------------------------------------------- */
+        const conservatoryFlowers = [
+            { id: 'jasmine', name: 'Gece Yasemini', chordName: 'Fa Majör 7 Arp', color: '#FBF4EB', center: '#F3CE93', chord: [N.F4, N.A4, N.C5, N.E5], msg: 'Gece yasemini karanlık çöktüğünde en güzel kokusunu yayar; tıpkı bu gece sevgimin odanı sessizce sarması gibi.' },
+            { id: 'peony', name: 'Kadife Şakayık', chordName: 'Re Minör 9 Arp', color: '#E5987F', center: '#F3CE93', chord: [N.D4, N.F4, N.A4, N.E5], msg: 'Kat kat yumuşacık yapraklarıyla seni pamuklara sarıp sarmalayan şefkatimi fısıldıyor.' },
+            { id: 'lavender', name: 'Ay Lavantası', chordName: 'Si Bemol Majör Arp', color: '#C4A7E7', center: '#F3CE93', chord: [N.Bb3, N.D4, N.F4, N.A4], msg: 'Başucuna bıraktığım bu lavanta dalı, bedenindeki bütün sızıyı ve yorgunluğu tatlı bir uykuya dönüştürüyor.' },
+            { id: 'magnolia', name: 'Işıltılı Manolya', chordName: 'Do Majör 9 Arp', color: '#F6E8EA', center: '#E5987F', chord: [N.C4, N.E4, N.G4, N.D5], msg: 'Manolya çiçeği kadar zarif ve kıymetlisin; bu gece başucunda nöbet tutmak benim en büyük mutluluğum.' },
+            { id: 'camellia', name: 'Kış Kamelyası', chordName: 'Sol Minör 7 Arp', color: '#E8A598', center: '#FBF4EB', chord: [N.G3, N.Bb3, N.D4, N.F4], msg: 'Serin kasım gecelerinde bile yapraklarını hiç dökmeyen kamelya gibi, kalbim her an senin sıcaklığınla dolu.' },
+            { id: 'orchid', name: 'Kehribar Orkide', chordName: 'La Minör 7 Arp', color: '#F3CE93', center: '#B85D52', chord: [N.A3, N.C4, N.E4, N.G4], msg: 'Hayatımdaki en nadide güzellik sensin. En yorgun, en uykulu halin bile gözümde büyüleyici.' },
+            { id: 'lotus', name: 'Gece Nilüferi', chordName: 'Mi Bemol Lydian Arp', color: '#F4D5CD', center: '#F3CE93', chord: [N.F4, N.G4, N.A4, N.C5], msg: 'Suyun üzerinde huzurla dinlenen nilüfer gibi, sen de bu gece bütün ağırlığını bana bırakıp dinlen.' },
+            { id: 'daffodil', name: 'Kasım Nergisi', chordName: 'Saat 11:00 Akoru', color: '#FFF3D1', center: '#E08A63', chord: [N.F4, N.A4, N.C5, N.F5], msg: 'Yarın saat 11:00 olduğunda bu çiçeklerin kokusu gerçek sarılmamızın sıcaklığına karışacak.' }
+        ];
+
+        let bloomedIds = [];
+
+        function renderConservatory() {
+            const grid = document.getElementById('conservatoryGrid');
+            grid.innerHTML = conservatoryFlowers.map(fl => {
+                const isBloomed = bloomedIds.includes(fl.id);
+                return `
+                <div onclick="bloomConservatoryFlower('${fl.id}')" class="velvet-panel rounded-3xl p-4 cursor-pointer flex flex-col items-center text-center group relative overflow-hidden ${isBloomed ? 'border-[#F3CE93]/65 bg-[#E5987F]/15' : ''}">
+                    <div class="w-20 h-20 flex items-center justify-center my-1">
+                        <svg viewBox="0 0 100 100" class="w-full h-full overflow-visible transition-transform duration-700 ${isBloomed ? 'scale-110 rotate-6' : 'group-hover:scale-105'}">
+                            <circle cx="50" cy="50" r="34" fill="${fl.color}" opacity="${isBloomed ? '0.24' : '0.07'}" />
+                            <path d="M50 55 L50 92" stroke="#B2969E" stroke-width="2.5" stroke-linecap="round" />
+                            <ellipse cx="50" cy="28" rx="10" ry="17" fill="${fl.color}" opacity="0.92" />
+                            <ellipse cx="50" cy="72" rx="10" ry="17" fill="${fl.color}" opacity="0.92" />
+                            <ellipse cx="28" cy="50" rx="17" ry="10" fill="${fl.color}" opacity="0.92" />
+                            <ellipse cx="72" cy="50" rx="17" ry="10" fill="${fl.color}" opacity="0.92" />
+                            <ellipse cx="35" cy="35" rx="12" ry="12" fill="${fl.color}" opacity="0.85" />
+                            <ellipse cx="65" cy="35" rx="12" ry="12" fill="${fl.color}" opacity="0.85" />
+                            <ellipse cx="35" cy="65" rx="12" ry="12" fill="${fl.color}" opacity="0.85" />
+                            <ellipse cx="65" cy="65" rx="12" ry="12" fill="${fl.color}" opacity="0.85" />
+                            <circle cx="50" cy="50" r="9" fill="${fl.center}" />
+                        </svg>
+                    </div>
+                    <h4 class="font-display text-base sm:text-lg text-white group-hover:text-[#F3CE93] transition">${fl.name}</h4>
+                    <span class="text-[11px] text-[#E4D0C8]/75 mt-0.5">${isBloomed ? '✨ Vazonun İçinde' : 'Arp Akoruyla Açtır'}</span>
+                </div>
+                `;
+            }).join('');
+            renderBouquetVase();
+        }
+
+        function bloomConservatoryFlower(id) {
+            const fl = conservatoryFlowers.find(f => f.id === id);
+            if (!fl) return;
+            if (!bloomedIds.includes(id)) bloomedIds.push(id);
+
+            // Play rich arpeggiated harp chord
+            fl.chord.forEach((freq, idx) => {
+                playConcertHarpNote(freq, 3.0, 0.13, idx * 0.09);
+            });
+
+            document.getElementById('flowerDetailTitle').textContent = fl.name;
+            document.getElementById('flowerDetailNote').textContent = fl.chordName;
+            document.getElementById('flowerDetailDesc').textContent = `"${fl.msg}"`;
+            document.getElementById('vaseBadge').textContent = `${bloomedIds.length} / 8 Çiçek`;
+
+            spawnSparkParticle('🌸');
+            renderConservatory();
+        }
+
+        function bloomEntireConservatory() {
+            conservatoryFlowers.forEach((fl, i) => {
+                setTimeout(() => bloomConservatoryFlower(fl.id), i * 210);
+            });
+        }
+
+        function renderBouquetVase() {
+            const g = document.getElementById('bouquetSvgGroup');
+            const slots = [
+                { x: 74, y: 76, rot: -18 }, { x: 100, y: 60, rot: 0 }, { x: 126, y: 76, rot: 18 },
+                { x: 60, y: 96, rot: -30 }, { x: 140, y: 96, rot: 30 }, { x: 86, y: 84, rot: -8 },
+                { x: 114, y: 84, rot: 8 }, { x: 100, y: 46, rot: 4 }
+            ];
+            g.innerHTML = bloomedIds.map((id, idx) => {
+                const fl = conservatoryFlowers.find(f => f.id === id);
+                const s = slots[idx % slots.length];
+                return `
+                    <g>
+                        <path d="M100 132 Q${s.x} 105 ${s.x} ${s.y}" stroke="#B2969E" stroke-width="2.5" fill="none" />
+                        <g transform="translate(${s.x}, ${s.y}) rotate(${s.rot})">
+                            <circle cx="0" cy="-8" r="6.5" fill="${fl.color}" />
+                            <circle cx="0" cy="8" r="6.5" fill="${fl.color}" />
+                            <circle cx="-8" cy="0" r="6.5" fill="${fl.color}" />
+                            <circle cx="8" cy="0" r="6.5" fill="${fl.color}" />
+                            <circle cx="0" cy="0" r="4.5" fill="${fl.center}" />
+                        </g>
+                    </g>
+                `;
+            }).join('');
+        }
+
+        /* -----------------------------------------------------------
+           7. SILK & SINGING BOWL CARESS CANVAS
+        ----------------------------------------------------------- */
+        const silkCanvas = document.getElementById('silkRibbonCanvas');
+        const silkCtx = silkCanvas.getContext('2d');
+        let silkPoints = [];
+        let isSilkDrawing = false;
+        let silkCalmProgress = 0;
+        let lastBowlSoundTime = 0;
+        const harmonicBowlScale = [N.F4, N.G4, N.A4, N.C5, N.D5, N.E5, N.F5];
+        const silkWhispers = [
+            "Saçlarının arasından geçen elim bütün yorgunluğunu alıyor...",
+            "Alnından öpüp saç tellerini kulağının arkasına sıkıştırıyorum...",
+            "Göz kapakların dinlensin güzelim, ben başucunda bekliyorum...",
+            "Nefesin yavaşlıyor, bedenin pamuk gibi yumuşuyor...",
+            "Çok güvendesin, çok seviliyorsun, huzurla dinlen..."
+        ];
+
+        function resizeSilkCanvas() {
+            const r = silkCanvas.parentElement.getBoundingClientRect();
+            silkCanvas.width = r.width;
+            silkCanvas.height = r.height;
+        }
+
+        function addSilkPoint(clientX, clientY) {
+            const r = silkCanvas.getBoundingClientRect();
+            const x = clientX - r.left;
+            const y = clientY - r.top;
+
+            silkPoints.push({
+                x, y,
+                radius: Math.random() * 16 + 12,
+                alpha: 0.8,
+                color: Math.random() > 0.5 ? '229, 152, 127' : '243, 206, 147'
+            });
+
+            const now = Date.now();
+            if (now - lastBowlSoundTime > 310) {
+                lastBowlSoundTime = now;
+                const freq = harmonicBowlScale[Math.floor(Math.random() * harmonicBowlScale.length)];
+                playSingingBowlHarmonic(freq);
+                silkCalmProgress = Math.min(100, silkCalmProgress + 2);
+                document.getElementById('silkCalmMeter').textContent = `%${silkCalmProgress}`;
+                const wIdx = Math.floor((silkCalmProgress / 100) * (silkWhispers.length - 1));
+                document.getElementById('silkWhisperOverlay').textContent = `"${silkWhispers[wIdx]}"`;
+            }
+        }
+
+        silkCanvas.addEventListener('mousedown', e => { isSilkDrawing = true; addSilkPoint(e.clientX, e.clientY); });
+        window.addEventListener('mouseup', () => { isSilkDrawing = false; });
+        silkCanvas.addEventListener('mousemove', e => { if (isSilkDrawing) addSilkPoint(e.clientX, e.clientY); });
+
+        silkCanvas.addEventListener('touchstart', e => {
+            isSilkDrawing = true;
+            if (e.touches[0]) addSilkPoint(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: true });
+        silkCanvas.addEventListener('touchmove', e => {
+            if (isSilkDrawing && e.touches[0]) addSilkPoint(e.touches[0].clientX, e.touches[0].clientY);
+        }, { passive: true });
+        silkCanvas.addEventListener('touchend', () => { isSilkDrawing = false; });
+
+        function renderSilkCanvas() {
+            silkCtx.fillStyle = 'rgba(15, 9, 20, 0.14)';
+            silkCtx.fillRect(0, 0, silkCanvas.width, silkCanvas.height);
+
+            for (let i = silkPoints.length - 1; i >= 0; i--) {
+                const p = silkPoints[i];
+                p.alpha -= 0.015;
+                p.radius *= 0.992;
+                if (p.alpha <= 0) {
+                    silkPoints.splice(i, 1);
+                    continue;
+                }
+                const g = silkCtx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 2.2);
+                g.addColorStop(0, `rgba(${p.color}, ${p.alpha})`);
+                g.addColorStop(1, `rgba(${p.color}, 0)`);
+                silkCtx.fillStyle = g;
+                silkCtx.beginPath();
+                silkCtx.arc(p.x, p.y, p.radius * 2.2, 0, Math.PI * 2);
+                silkCtx.fill();
+            }
+            requestAnimationFrame(renderSilkCanvas);
+        }
+        window.addEventListener('resize', resizeSilkCanvas);
+
+        /* -----------------------------------------------------------
+           8. PRESS & HOLD EMBRACE SIMULATOR
+        ----------------------------------------------------------- */
+        let embraceTimer = null;
+        let embraceWarmth = 0;
+        const embraceWhispers = [
+            "Şu an başını göğsüme yasladığını ve kollarımı sana doladığımı hisset...",
+            "Kalp atışımın ritmini dinle, bütün yorgunluğun bana aksın...",
+            "Saçlarının üstünden öpüp kaşmir battaniyeyi omuzlarına çekiyorum...",
+            "Çok güvendesin güzelim, bu gece başucundan bir saniye bile ayrılmıyorum...",
+            "Nefesini benim nefesime bırak, içini ısıtan o şefkati hisset..."
+        ];
+
+        function startDeepEmbrace(e) {
+            if (e && e.cancelable) e.preventDefault();
+            if (embraceTimer) return;
+
+            document.getElementById('embraceRings').classList.remove('hidden');
+            document.getElementById('embraceScreenOverlay').classList.remove('opacity-0');
+            document.getElementById('embraceScreenOverlay').classList.add('opacity-100');
+            document.getElementById('embraceBtnLabel').textContent = 'Sana Sarılıyorum...';
+
+            triggerRealisticHeartbeat(0.75);
+
+            embraceTimer = setInterval(() => {
+                embraceWarmth = Math.min(100, embraceWarmth + 4);
+                document.getElementById('embraceProgressBar').style.width = `${embraceWarmth}%`;
+                const temp = (36.5 + (embraceWarmth / 100) * 1.5).toFixed(1);
+                document.getElementById('embraceTempText').textContent = `${temp}°C (%${embraceWarmth})`;
+                const idx = Math.min(embraceWhispers.length - 1, Math.floor(embraceWarmth / 22));
+                document.getElementById('embraceWhisperText').textContent = `"${embraceWhispers[idx]}"`;
+
+                spawnSparkParticle('🤍');
+                if (embraceWarmth % 16 === 0) {
+                    triggerRealisticHeartbeat(0.75);
+                }
+            }, 220);
+        }
+
+        function stopDeepEmbrace() {
+            if (!embraceTimer) return;
+            clearInterval(embraceTimer);
+            embraceTimer = null;
+            document.getElementById('embraceRings').classList.add('hidden');
+            document.getElementById('embraceScreenOverlay').classList.remove('opacity-100');
+            document.getElementById('embraceScreenOverlay').classList.add('opacity-0');
+            document.getElementById('embraceBtnLabel').textContent = 'Sarılmak İçin Basılı Tut';
+        }
+
+        function spawnSparkParticle(symbol = '✨') {
+            const el = document.createElement('div');
+            el.className = 'floating-spark text-xl sm:text-2xl';
+            el.textContent = symbol;
+            el.style.left = `${44 + (Math.random() * 14 - 7)}vw`;
+            el.style.top = `${56 + (Math.random() * 10 - 5)}vh`;
+            document.body.appendChild(el);
+            setTimeout(() => el.remove(), 2700);
+        }
+
+        /* -----------------------------------------------------------
+           9. 12 WAX-SEALED BEDSIDE LETTERS
+        ----------------------------------------------------------- */
+        const lettersData = [
+            { id: 1, tag: "Mühürlü Zarf #1", title: "Şu an bedenin çok yorgun ve ağır hissediyorsa aç...", preview: "Üzerindeki bütün ağırlığı şu saniye omuzlarıma bırakabilirsin...", paragraphs: ["Benim güzel sevgilim, şu an bedeninin sanki tonlarca yük taşımış gibi ağırlaştığını, kolunu kıpırdatacak halinin bile olmadığını biliyorum. Bu gece hiçbir şey başarmak, hiçbir yere yetişmek ya da enerjik olmak zorunda değilsin.", "Yatağında en rahat ettiğin pozisyonu bul ve omuzlarını gevşet. Şu an tam başucunda oturup elini tuttuğumu, üzerindeki bütün yorgunluğu kendi avuçlarıma aldığımı hisset.", "Sen sadece derin bir nefes al ve dinlen; bu gece senin rahatından daha önemli hiçbir şey yok."] },
+            { id: 2, tag: "Mühürlü Zarf #2", title: "Gece uyumakta zorlanıyorsan aç...", preview: "Gözlerini kapattığında saçlarında dolaşan elim...", paragraphs: ["Bazen insan ne kadar yorgun olursa olsun, vücudundaki huzursuzluk yüzünden bir türlü uykuya dalamaz. Sağa dönersin, sola dönersin ama rahat edemezsin ya... İşte tam şu an yanındayım.", "Gözlerini kapat güzelim. Üstünü omuzlarına kadar örttüğümü, bir elimi beline doladığımı ve diğer elimle saçlarını alnından geriye doğru yavaşça okşadığımı hayal et.", "Hiçbir yere gitmiyorum. Sen uykuya dalana kadar ve sabaha karşı uyanana kadar bu huzurlu nöbeti senin yanında tutuyorum."] },
+            { id: 3, tag: "Mühürlü Zarf #3", title: "Canın hiçbir şey yapmak ve konuşmak istemiyorsa aç...", preview: "Benim yanımda en sessiz, en durgun halinle kalabilirsin...", paragraphs: ["Seni sevmemin en güzel taraflarından biri, seninle sessizliği bile en derin huzurla paylaşabilmek. Yüzünde bir gülümseme olmak zorunda değil, tek bir kelime bile kurmak zorunda değilsin.", "Benim yanımda 'iyi görünme' ya da 'enerjik olma' çabasına hiç girmene gerek yok. Senin en yorgun, en durgun, en sessiz halin bile benim kalbimin en kıymetli köşesinde.", "Sadece başını omzuma yasla ve sessizliğimizin tadını çıkar."] },
+            { id: 4, tag: "Mühürlü Zarf #4", title: "Yarın saat 11:00'deki kavuşmamızı düşünürken aç...", preview: "Bu geceki yakınlığımızın sabah 11'de gerçeğe dönüşmesi...", paragraphs: ["Bu gece ruhumla, kalbimle ve bütün şefkatimle odandayım; sabah saatler 11:00'i gösterdiğinde ise kanlı canlı karşında olacağım.", "Yarınki buluşmamızda hiçbir telaşımız, hiçbir acelemiz yok. Sadece bu gece başladığımız o sakin dinlenmeye, benim kollarımın arasında devam edeceğiz.", "Saat 11:00, senin sadece başını omzuma koyup bütün dünyayı unuttuğun o huzurlu saatimiz."] },
+            { id: 5, tag: "Mühürlü Zarf #5", title: "İçin sebepsizce burkuluyor veya hassas hissediyorsan aç...", preview: "Kırılganlığın da, hassasiyetin de başımın üstünde...", paragraphs: ["İnsanın ruhu bazen en ufak bir şeye bile kırılacak kadar incelir, sebepsizce duygulanır. Eğer şu an içinde öyle bir his varsa, lütfen onu bastırmaya çalışma.", "Hassaslaşman senin o tertemiz ve derin kalbinin güzelliğinden geliyor. İçinden ne geçiyorsa öyle kal; ben seni her duygu durumunda pamuklara sararak seviyorum.", "Göğsüm senin en güvenli limanın, orada istediğin kadar dinlenebilirsin."] },
+            { id: 6, tag: "Mühürlü Zarf #6", title: "Üşüyorsan ve ısınmaya ihtiyacın varsa aç...", preview: "Avuçlarının içini ısıtan o sıcaklık...", paragraphs: ["Ayaklarının ya da parmak uçlarının üşüdüğünü hisseder gibiyim. Şimdi yorganını biraz daha kendine çek ve iki elini avuçlarımın arasına aldığımı düşün.", "Kendi hırkamı omuzlarına sardığımı, seni göğsüme doğru çekip dışarıdaki bütün soğuğu kapının dışında bıraktığımı hisset.", "Bedenin ısındıkça içindeki bütün gerginlik de yavaşça eriyip gidiyor."] },
+            { id: 7, tag: "Mühürlü Zarf #7", title: "Şu an benim gözümden nasıl göründüğünü merak ediyorsan aç...", preview: "En uykulu, en dağınık halinde bile ne kadar büyüleyici olduğun...", paragraphs: ["İnsan kendini halsiz ve bitkin hissettiğinde bazen nasıl göründüğünü dert eder ya... Sakın aklının ucundan bile geçirme.", "Sen benim gözümde uykulu bakışlarınla, dağınık saçlarınla, en rahat ev halinle bile dünyanın en zarif, en öpülesi, en güzel kadınısın.", "Ben senin o yorgun bakışlarına, şefkat bekleyen masum duruşuna her şeyden çok aşığım."] },
+            { id: 8, tag: "Mühürlü Zarf #8", title: "Sadece kedi gibi sokulup nazlanmak istediğinde aç...", preview: "Bütün nazın ve kaprisin kalbimin en tatlı neşesi...", paragraphs: ["Başkalarına karşı hep olgun ve güçlü durmak zorunda olabilirsin ama benim yanımda dilediğin kadar nazlanabilirsin.", "İstediğin kadar kapris yap, istediğin kadar 'beni şımart' de; benim için dünyadaki en büyük mutluluk senin o tatlı nazını çekmek ve seninle ilgilenmek.", "Şu an bütün ilgim ve şefkatim sadece senin üzerinde."] },
+            { id: 9, tag: "Mühürlü Zarf #9", title: "Vücudunda sızı ve gerginlik varsa aç...", preview: "Ağrını dindiren sakin bir nefes ve sıcak avucum...", paragraphs: ["Vücudunun herhangi bir yerinde sızı ya da gerginlik varsa, lütfen şimdi çeneni ve omuzlarını sıkmadığından emin ol. Başını yastığa tamamen bırak.", "Bir elini gergin hissettiğin yerin üzerine koy ve sanki oradaki el benim sıcak elimmiş gibi derin, yavaş bir nefes al.", "Her nefes verişinde o sızının bedeninden uzaklaştığını ve yerini ılık bir rahatlamaya bıraktığını hisset."] },
+            { id: 10, tag: "Mühürlü Zarf #10", title: "Dünyanın gürültüsünden uzaklaşmak istediğinde aç...", preview: "Kapıyı kapattık, dışarıda kimse kalmadı, sadece biz varız...", paragraphs: ["Sorumluluklar, telefon bildirimleri, insanların beklentileri... Hepsini şu an odanın kapısının dışında bıraktık.", "Burası sadece ikimizin olduğu, zamanın çok yavaş aktığı mum ışığında bir köşk. Burada senden hiçbir şey beklenmiyor.", "Burada sadece senin huzurun, senin dinlenmen ve benim seni sarmalayan sevgim var."] },
+            { id: 11, tag: "Mühürlü Zarf #11", title: "Yüzünde tatlı bir tebessüm oluşsun istediğinde aç...", preview: "Yorganın altından bu satırları okuyan o güzel yüzün...", paragraphs: ["Şu an yorganın altından ekrana nasıl tatlı tatlı baktığını görebiliyorum! Gözlerinin kenarındaki o yumuşak ifadeyi ve dudak kenarındaki minicik kıvrımı çok seviyorum.", "Sen hafifçe gülümsediğin an benim içimde bütün çiçekler aynı anda açıyor.", "İyi ki varsın, iyi ki bu gece de kalbim seninle dolu."] },
+            { id: 12, tag: "Mühürlü Zarf #12", title: "Seni nasıl bir derinlikle sevdiğimi hissetmek için aç...", preview: "Sadece neşeli günlerde değil, en yorgun gecelerde daha da büyüyen sevgi...", paragraphs: ["Seni sadece güneşli, kahkaha dolu günlerimizde değil; böyle yorgun, halsiz ve sessiz gecelerde çok daha derinden seviyorum.", "Sevmek, sevdiğin insanın yorgunluğunu kendi avuçlarında dinlendirebilmektir. Şu an senin yanında olmak, elini tutmak benim için dünyadaki en anlamlı şey.", "Şimdi huzurla uyu benim canımın içi. Seni her şeyden çok seviyorum."] }
+        ];
+
+        function renderEnvelopes() {
+            const grid = document.getElementById('envelopesGrid');
+            grid.innerHTML = lettersData.map(l => `
+                <div onclick="openLetterModal(${l.id})" class="velvet-panel rounded-3xl p-6 cursor-pointer group flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-[#F3CE93] mb-3">
+                            <span>${l.tag}</span>
+                            <div class="w-8 h-8 rounded-full wax-seal flex items-center justify-center group-hover:scale-110 transition">
+                                <i data-lucide="mail" class="w-3.5 h-3.5 text-white"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-display text-xl sm:text-2xl text-white font-light group-hover:text-[#F3CE93] transition leading-snug">
+                            ${l.title}
+                        </h3>
+                        <p class="font-serif text-sm text-[#E4D0C8]/75 mt-2 line-clamp-2">
+                            ${l.preview}
+                        </p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-[#E5987F]">
+                        <span>Mührü Aç ve Oku</span>
+                        <span class="group-hover:translate-x-1 transition">→</span>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function openLetterModal(id) {
+            const l = lettersData.find(x => x.id === id);
+            if (!l) return;
+            playConcertHarpNote(N.F4, 2.5, 0.12);
+            playConcertHarpNote(N.C5, 2.8, 0.12, 0.1);
+            document.getElementById('modalEnvelopeTag').textContent = l.tag;
+            document.getElementById('modalLetterTitle').textContent = l.title;
+            document.getElementById('modalLetterBody').innerHTML = l.paragraphs.map(p => `<p>${p}</p>`).join('');
+            const m = document.getElementById('letterModal');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+        }
+
+        function closeLetterModal() {
+            const m = document.getElementById('letterModal');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        /* -----------------------------------------------------------
+           10. 100 PRESENT-MOMENT WHISPERS JAR
+        ----------------------------------------------------------- */
+        const all100Notes = [
+            { id: 1, cat: 'suan', label: 'Şu An Yanında', text: "Şu an başucunda oturup sadece sakin nefes alışverişini dinlemek bile dünyadaki en büyük huzur." },
+            { id: 2, cat: 'suan', label: 'Şu An Yanında', text: "Elimi alnına ve saçlarına koyduğumu hisset; bütün yorgunluğun parmak uçlarımdan dağılıp gidiyor." },
+            { id: 3, cat: 'suan', label: 'Şu An Yanında', text: "Bu gece hiçbir şey düşünmek zorunda değilsin, senin yerine bütün dünyayı ben sessize aldım." },
+            { id: 4, cat: 'suan', label: 'Şu An Yanında', text: "Yorganının altındaki o sıcak ve güvenli alanda kalbim tam senin kalbinin yanında atıyor." },
+            { id: 5, cat: 'suan', label: 'Şu An Yanında', text: "Üşüyen parmaklarını iki avucumun arasına alıp sıcacık tutuyorum." },
+            { id: 6, cat: 'suan', label: 'Şu An Yanında', text: "Şu an gözlerini kapattığında karanlık değil, benim seni sarmalayan şefkatim var etrafında." },
+            { id: 7, cat: 'suan', label: 'Şu An Yanında', text: "Yastığına başını koyduğun an, aslında başını benim omzuma ve göğsüme yaslamış oluyorsun." },
+            { id: 8, cat: 'suan', label: 'Şu An Yanında', text: "Odanın içindeki bu dinginlik, ikimizin birbirine duyduğu o derin sevgiden geliyor." },
+            { id: 9, cat: 'suan', label: 'Şu An Yanında', text: "Sen uyurken üstün açılmasın diye battaniyeni omuzlarına kadar çeken o el benim elim." },
+            { id: 10, cat: 'suan', label: 'Şu An Yanında', text: "Bedenindeki bütün kasların gevşemesine izin ver; ben buradayım ve seni koruyorum." },
+            { id: 11, cat: 'suan', label: 'Şu An Yanında', text: "Bu gece kelimelere hiç ihtiyacımız yok, sadece elimi tutman her şeyi anlatmaya yetiyor." },
+            { id: 12, cat: 'suan', label: 'Şu An Yanında', text: "Saçlarının her bir telini incitmeden, uyku getirici bir ritimle okşuyorum." },
+            { id: 13, cat: 'suan', label: 'Şu An Yanında', text: "Yorgunluğun ne kadar fazla olursa olsun, benim şefkatim onu sarıp sarmalayacak kadar büyük." },
+            { id: 14, cat: 'suan', label: 'Şu An Yanında', text: "Şu an tek görevin gözlerini dinlendirmek ve ne kadar çok sevildiğini hissetmek." },
+            { id: 15, cat: 'suan', label: 'Şu An Yanında', text: "Gece ne kadar uzun olursa olsun, başucundaki varlığım sabaha kadar seninle." },
+            { id: 16, cat: 'suan', label: 'Şu An Yanında', text: "Alnına kondurduğum o uzun ve sıcak iyi geceler öpücüğünü hisset güzelim." },
+            { id: 17, cat: 'suan', label: 'Şu An Yanında', text: "Sana sarıldığımda dış dünyadaki bütün soğukluk ve gürültü tamamen siliniyor." },
+            { id: 18, cat: 'suan', label: 'Şu An Yanında', text: "Şu an yanaklarını avuçlarımın içine alıp gözlerinin içine sevgiyle bakıyorum." },
+            { id: 19, cat: 'suan', label: 'Şu An Yanında', text: "Bedenin dinlenirken ruhunun da benim yanımda huzur bulduğunu biliyorum." },
+            { id: 20, cat: 'suan', label: 'Şu An Yanında', text: "İkimizin arasındaki mesafe sadece haritalarda var; kalbim tam şu an yastığının başucunda." },
+            { id: 21, cat: 'suan', label: 'Şu An Yanında', text: "Derin bir nefes çek içine; o nefesin içinde benim sana gönderdiğim huzur var." },
+            { id: 22, cat: 'suan', label: 'Şu An Yanında', text: "Ellerim ellerine kenetli, bu geceyi birbirimizin sıcaklığıyla geçiriyoruz." },
+            { id: 23, cat: 'suan', label: 'Şu An Yanında', text: "Yorgun göz kapaklarını öpüp seni en tatlı rüyalara uğurluyorum." },
+            { id: 24, cat: 'suan', label: 'Şu An Yanında', text: "Senin rahat etmen, gevşemen ve huzurla uyuman bu gecenin tek anlamı." },
+            { id: 25, cat: 'suan', label: 'Şu An Yanında', text: "Başucunda açan çiçekler ve mum ışığıyla birlikte sabaha kadar senin yanındayım." },
+            { id: 26, cat: 'huzur', label: 'Senin Huzurun', text: "Yanımda olduğunda hiçbir şey konuşmasak bile odanın içinin sıcaklıkla dolmasını seviyorum." },
+            { id: 27, cat: 'huzur', label: 'Senin Huzurun', text: "Başını omzuma koyduğun o ilk saniyede dünyadaki bütün telaşın durmasını seviyorum." },
+            { id: 28, cat: 'huzur', label: 'Senin Huzurun', text: "Sesinin tonundaki o yumuşaklığın en gergin günümde bile beni pamuk gibi yapmasını seviyorum." },
+            { id: 29, cat: 'huzur', label: 'Senin Huzurun', text: "Sana sarıldığımda gerçekten 'evimdeyim' hissini bana yaşatmanı seviyorum." },
+            { id: 30, cat: 'huzur', label: 'Senin Huzurun', text: "Elimi tuttuğunda parmaklarımızın birbirine sanki hep oradaymış gibi kenetlenmesini seviyorum." },
+            { id: 31, cat: 'huzur', label: 'Senin Huzurun', text: "Yorgun olduğunda bile gözlerimin içine bakarken bana verdiğin o derin güveni seviyorum." },
+            { id: 32, cat: 'huzur', label: 'Senin Huzurun', text: "Seninle yan yana dururken zamanın nasıl yavaş ve anlamlı aktığını seviyorum." },
+            { id: 33, cat: 'huzur', label: 'Senin Huzurun', text: "İç çekişini bile dinleyip seni anlamayı, seninle aynı havayı solumayı seviyorum." },
+            { id: 34, cat: 'huzur', label: 'Senin Huzurun', text: "Kokunun üstüme sinmesini ve bana her an huzur vermesini seviyorum." },
+            { id: 35, cat: 'huzur', label: 'Senin Huzurun', text: "Senin yanında hiçbir maske takmak zorunda kalmadan kendim olabilmeyi seviyorum." },
+            { id: 36, cat: 'huzur', label: 'Senin Huzurun', text: "Uykulu sesinle bana seslenmeni dünyadaki tüm şarkılardan çok seviyorum." },
+            { id: 37, cat: 'huzur', label: 'Senin Huzurun', text: "Birlikte sessizce oturup dışarıyı izlerken bile en güzel anıyı paylaşmamızı seviyorum." },
+            { id: 38, cat: 'huzur', label: 'Senin Huzurun', text: "Bana sokulup ısınmaya çalıştığında kalbimin mutlulukla dolmasını seviyorum." },
+            { id: 39, cat: 'huzur', label: 'Senin Huzurun', text: "Senin varlığının hayatıma kattığı o tarifsiz zarafeti ve dinginliği seviyorum." },
+            { id: 40, cat: 'huzur', label: 'Senin Huzurun', text: "Gözlerini kapatıp derin nefes aldığında kirpiklerinin yüzüne düşen gölgesini izlemeyi seviyorum." },
+            { id: 41, cat: 'huzur', label: 'Senin Huzurun', text: "Kalabalık bir ortamda bile göz göze geldiğimizde sadece ikimizin olduğu o gizli dünyayı seviyorum." },
+            { id: 42, cat: 'huzur', label: 'Senin Huzurun', text: "Bana güvendiğini hissettiren her küçük hareketini, bana yaslanışını seviyorum." },
+            { id: 43, cat: 'huzur', label: 'Senin Huzurun', text: "Saçlarını okşarken senin yavaşça gevşeyip huzura kavuşmanı izlemeyi seviyorum." },
+            { id: 44, cat: 'huzur', label: 'Senin Huzurun', text: "Kalbinin ne kadar merhametli, ne kadar ince düşünceli olduğunu bilmeyi seviyorum." },
+            { id: 45, cat: 'huzur', label: 'Senin Huzurun', text: "Seninle kurduğumuz bu şefkat dolu bağın sıcaklığını seviyorum." },
+            { id: 46, cat: 'huzur', label: 'Senin Huzurun', text: "Bana sarılırken çeneni omzuma yaslayışını her şeyden çok seviyorum." },
+            { id: 47, cat: 'huzur', label: 'Senin Huzurun', text: "Seninle paylaştığımız en dingin anın bile kalbimi ısıtmasını seviyorum." },
+            { id: 48, cat: 'huzur', label: 'Senin Huzurun', text: "Hayatımın en güvenli, en sıcak, en güzel sığınağı olmanı seviyorum." },
+            { id: 49, cat: 'huzur', label: 'Senin Huzurun', text: "Yanında olduğum her an dünyanın en doğru yerinde olduğumu hissetmeyi seviyorum." },
+            { id: 50, cat: 'huzur', label: 'Senin Huzurun', text: "Seninle paylaştığımız o yumuşacık, koşulsuz şefkat dilini seviyorum." },
+            { id: 51, cat: 'detay', label: 'Güzel Detayların', text: "Gülümsediğinde gözlerinin içinin parlamasını ve yüzünün aydınlanmasını seviyorum." },
+            { id: 52, cat: 'detay', label: 'Güzel Detayların', text: "Bir şeye şaşırdığında ya da heyecanlandığında ses tonunun tatlılaşmasını seviyorum." },
+            { id: 53, cat: 'detay', label: 'Güzel Detayların', text: "Üşüdüğünde ellerini kollarının içine çekip küçücük kalmanı ve bana bakışını seviyorum." },
+            { id: 54, cat: 'detay', label: 'Güzel Detayların', text: "Saçlarının dağılmasını ve onları kulağının arkasına sıkıştırmanı seviyorum." },
+            { id: 55, cat: 'detay', label: 'Güzel Detayların', text: "Bana naz yaparken dudaklarını hafifçe büzüşünü ve o tatlı bakışını seviyorum." },
+            { id: 56, cat: 'detay', label: 'Güzel Detayların', text: "Ellerinin zarafetini, parmaklarının sıcaklığını ve avuç içini öpmeyi seviyorum." },
+            { id: 57, cat: 'detay', label: 'Güzel Detayların', text: "Sevdiğin bir şeyi içerken veya yerken yüzünde beliren o mutlu ifadeyi seviyorum." },
+            { id: 58, cat: 'detay', label: 'Güzel Detayların', text: "Yorgunken bile gözlerindeki o derin ve anlamlı bakışı seviyorum." },
+            { id: 59, cat: 'detay', label: 'Güzel Detayların', text: "Benim hırkamın veya kıyafetlerimin senin üzerinde bol ve çok tatlı durmasını seviyorum." },
+            { id: 60, cat: 'detay', label: 'Güzel Detayların', text: "Adımı senin dudaklarından duymayı, ismime kattığın o sıcaklığı seviyorum." },
+            { id: 61, cat: 'detay', label: 'Güzel Detayların', text: "Utandığında yanaklarının hafifçe pembeleşmesini ve gözlerini kaçırışını seviyorum." },
+            { id: 62, cat: 'detay', label: 'Güzel Detayların', text: "Küçük şeylerden mutlu olabilen o tertemiz, zarif ruhunu seviyorum." },
+            { id: 63, cat: 'detay', label: 'Güzel Detayların', text: "Fotoğraflarımıza her baktığımda sana yeniden ilk günkü gibi aşık olmayı seviyorum." },
+            { id: 64, cat: 'detay', label: 'Güzel Detayların', text: "Bana 'sevgilim' derken sesine yansıyan o şefkati seviyorum." },
+            { id: 65, cat: 'detay', label: 'Güzel Detayların', text: "Uykun geldiğinde gözlerini ovuşturup bana yaslanmanı seviyorum." },
+            { id: 66, cat: 'detay', label: 'Güzel Detayların', text: "Senin kendine has tarzını, doğal zarafetini ve duruşunu seviyorum." },
+            { id: 67, cat: 'detay', label: 'Güzel Detayların', text: "Seninle göz göze geldiğimizde zamanın birkaç saniye durmasını seviyorum." },
+            { id: 68, cat: 'detay', label: 'Güzel Detayların', text: "Kızmaya çalışırken bile aslında ne kadar tatlı göründüğünü seviyorum." },
+            { id: 69, cat: 'detay', label: 'Güzel Detayların', text: "Doğaya, çiçeklere ve güzel olan her şeye gösterdiğin o ince şefkati seviyorum." },
+            { id: 70, cat: 'detay', label: 'Güzel Detayların', text: "Alnından öptüğümde gözlerini kapatıp hafifçe gülümsemeni seviyorum." },
+            { id: 71, cat: 'detay', label: 'Güzel Detayların', text: "En doğal, en salaş, en uykulu halinin bile büyüleyici olmasını seviyorum." },
+            { id: 72, cat: 'detay', label: 'Güzel Detayların', text: "Kirpiklerinin uzunluğunu ve bakışlarının kalbime dokunuşunu seviyorum." },
+            { id: 73, cat: 'detay', label: 'Güzel Detayların', text: "Bana sokulurken çıkardığın o huzurlu küçük iç çekişi seviyorum." },
+            { id: 74, cat: 'detay', label: 'Güzel Detayların', text: "Varlığınla etrafındaki her şeyi güzelleştirme biçimini seviyorum." },
+            { id: 75, cat: 'detay', label: 'Güzel Detayların', text: "Tepeden tırnağa, ruhundan kalbine kadar sadece 'sen' olmanı seviyorum." },
+            { id: 76, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "9 Kasım saat 11:00, bu geceki sarılmamızın gerçeğe dönüştüğü o sıcak an." },
+            { id: 77, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de seni gördüğüm ilk saniye kollarımın arasına alıp dünyayı dışarıda bırakıyorum." },
+            { id: 78, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Sabah buluştuğumuzda hiçbir yere yetişme telaşımız yok, zaman tamamen bizim." },
+            { id: 79, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "En rahat, en yumuşak kıyafetinle gel; benim yanımda her halinle prensessin." },
+            { id: 80, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11'de ellerin ellerime değdiği an bütün yorgunluğun eriyip gidiyor." },
+            { id: 81, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Sabah uyandığında bil ki seni kollarını açmış bekleyen çok aşık bir sevgilin var." },
+            { id: 82, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "9 Kasım Pazartesi, takvimdeki en huzurlu gün çünkü saat 11:00'de seninle başlıyor." },
+            { id: 83, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Buluştuğumuzda başını omzuma koyup kaldığın yerden dinlenmeye devam edebilirsin." },
+            { id: 84, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de kokunu içime çekmek, bu haftanın en güzel anı." },
+            { id: 85, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Seninle yan yana oturup sıcacık bir şeyler içerken ellerini hiç bırakmıyorum." },
+            { id: 86, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'deki o ilk sarılmamız, bu gecenin en güzel devamı." },
+            { id: 87, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Hiçbir şey konuşmasak bile yan yana olacağımız o sakin sabah için kalbim sıcacık." },
+            { id: 88, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Yarın sabah adımlarını hiç yorma, en yavaş ve en dingin tempoda buluşuyoruz." },
+            { id: 89, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de gözlerinin içine bakıp 'İyi ki yanımdasın güzelim' demek için sabırsızlanıyorum." },
+            { id: 90, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Hırkamın ve kollarımın sıcaklığı saat 11:00'de tamamen senin." },
+            { id: 91, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Sabah güneş doğduğunda kavuşmamıza sadece birkaç küçük saat kalmış olacak." },
+            { id: 92, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de bütün ağırlığını ve çantanı bana bırakıp sadece koluma giriyorsun." },
+            { id: 93, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Kasım ayının serinliğinde birbirimizin en sıcak sığınağı oluyoruz." },
+            { id: 94, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de saçlarını okşayan elim artık ekranın arkasında değil, tam yanında." },
+            { id: 95, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Sabah uykundan uyandığında yüzünde tatlı bir huzur olsun, çünkü kavuşma günümüz geldi." },
+            { id: 96, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de alnına kondurduğum öpücükle günümüz aydınlanıyor." },
+            { id: 97, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Seninle geçireceğimiz sakin, yumuşak ve şefkat dolu bir kasım günü bizi bekliyor." },
+            { id: 98, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Bu gece mışıl mışıl uyu, saat 11:00'de kaldığımız yerden sarılmaya devam ediyoruz." },
+            { id: 99, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "Saat 11:00'de ellerimiz birleştiğinde dünyadaki bütün huzur bizimle." },
+            { id: 100, cat: 'sabah', label: '9 Kasım Saat 11:00', text: "100. Fısıltı: Bu gece başucunda, sabah saat 11'de kollarında, her saniye kalbindeyim sevgilim ♥" }
+        ];
+
+        let filteredNotes = [...all100Notes];
+        let currentJarIdx = 0;
+
+        function updateJarDisplay() {
+            const note = filteredNotes[currentJarIdx];
+            if (!note) return;
+            document.getElementById('jarNoteNumber').textContent = `FISILTI #${note.id} / 100`;
+            document.getElementById('jarNoteCategoryBadge').textContent = note.label;
+            document.getElementById('jarNoteText').textContent = `"${note.text}"`;
+        }
+
+        function drawRandomNote() {
+            currentJarIdx = Math.floor(Math.random() * filteredNotes.length);
+            updateJarDisplay();
+            playConcertHarpNote(N.A4, 2.0, 0.11);
+            spawnSparkParticle('✨');
+        }
+
+        function nextJarNote() {
+            currentJarIdx = (currentJarIdx + 1) % filteredNotes.length;
+            updateJarDisplay();
+        }
+
+        function prevJarNote() {
+            currentJarIdx = (currentJarIdx - 1 + filteredNotes.length) % filteredNotes.length;
+            updateJarDisplay();
+        }
+
+        function filterJarCategory(cat, btnEl) {
+            document.querySelectorAll('.jar-cat-btn').forEach(b => {
+                b.className = 'jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition';
+            });
+            btnEl.className = 'jar-cat-btn px-3.5 py-1.5 rounded-full text-xs bg-[#F3CE93] text-[#120B16] font-semibold transition';
+            filteredNotes = cat === 'all' ? [...all100Notes] : all100Notes.filter(n => n.cat === cat);
+            currentJarIdx = 0;
+            updateJarDisplay();
+        }
+
+        function toggleAllNotesModal() {
+            const m = document.getElementById('allNotesModal');
+            if (m.classList.contains('hidden')) {
+                document.getElementById('allNotesListContainer').innerHTML = all100Notes.map(n => `
+                    <div class="p-4 rounded-2xl bg-black/45 border border-white/10">
+                        <div class="flex justify-between text-[11px] text-[#F3CE93] mb-1">
+                            <span>#${n.id}</span>
+                            <span>${n.label}</span>
+                        </div>
+                        <p class="font-serif italic text-base text-[#FBF4EB]">"${n.text}"</p>
+                    </div>
+                `).join('');
+                m.classList.remove('hidden');
+                m.classList.add('flex');
+            } else {
+                m.classList.add('hidden');
+                m.classList.remove('flex');
+            }
+        }
+
+        /* -----------------------------------------------------------
+           11. 5 SCENTED BEDSIDE CANDLES & STORIES
+        ----------------------------------------------------------- */
+        const candlesData = [
+            { id: 'amber', name: 'Kehribar', lit: true, freq: N.F4 },
+            { id: 'sandal', name: 'Sandal', lit: true, freq: N.G4 },
+            { id: 'vanilla', name: 'Vanilya', lit: true, freq: N.A4 },
+            { id: 'lavender', name: 'Lavanta', lit: true, freq: N.C5 },
+            { id: 'fig', name: 'Gece İnciri', lit: true, freq: N.D5 }
+        ];
+
+        function renderCandles() {
+            const c = document.getElementById('candlesContainer');
+            c.innerHTML = candlesData.map((cd, idx) => `
+                <div onclick="toggleCandle(${idx})" class="flex flex-col items-center cursor-pointer group select-none">
+                    <div class="h-10 flex items-center justify-center">
+                        ${cd.lit ? `
+                            <div class="relative flex items-center justify-center">
+                                <div class="w-8 h-8 rounded-full bg-[#F3CE93]/35 blur-md animate-pulse"></div>
+                                <div class="w-3.5 h-6 rounded-full bg-gradient-to-t from-[#E5987F] via-[#F3CE93] to-white animate-flame-flicker shadow-[0_0_16px_#F3CE93]"></div>
+                            </div>
+                        ` : `
+                            <div class="w-0.5 h-3 bg-[#B2969E]/50"></div>
+                        `}
+                    </div>
+                    <div class="w-11 sm:w-12 h-20 rounded-t-lg rounded-b-xl bg-gradient-to-b from-[#FBF4EB] via-[#E4D0C8] to-[#B2969E] border border-[#F3CE93]/40 shadow-lg flex items-end justify-center pb-2 group-hover:scale-105 transition">
+                        <span class="text-[9px] font-semibold text-[#160F18] uppercase tracking-tighter">${cd.name}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            const litNames = candlesData.filter(x => x.lit).map(x => x.name);
+            document.getElementById('candleScentStatus').textContent = litNames.length
+                ? `"Açık mum kokuları: ${litNames.join(', ')}..."`
+                : `"Tüm mumlar söndürüldü, odan karanlık ve dingin..."`;
+        }
+
+        function toggleCandle(idx) {
+            candlesData[idx].lit = !candlesData[idx].lit;
+            if (candlesData[idx].lit) {
+                playSingingBowlHarmonic(candlesData[idx].freq);
+            }
+            renderCandles();
+        }
+
+        function setScreenDimmer(val) {
+            document.getElementById('dimmerValueLabel').textContent = `%${val}`;
+            document.getElementById('sleepDimmerOverlay').style.opacity = (val / 100).toFixed(2);
+        }
+
+        let sleepTimerInterval = null;
+        function startSleepTimer(mins) {
+            if (sleepTimerInterval) clearInterval(sleepTimerInterval);
+            let secs = mins * 60;
+            if (!isMusicPlaying) startMasterSequencer();
+            const st = document.getElementById('sleepTimerStatus');
+            st.textContent = `🌙 Uyku nöbeti aktif (${mins} dk)...`;
+
+            sleepTimerInterval = setInterval(() => {
+                secs--;
+                const mLeft = Math.ceil(secs / 60);
+                st.textContent = `🌙 Sen uyurken başucundayım (${mLeft} dk kaldı)...`;
+                const progress = 1 - (secs / (mins * 60));
+                setScreenDimmer(Math.min(68, Math.floor(progress * 68)));
+                if (secs <= 0) {
+                    clearInterval(sleepTimerInterval);
+                    stopAllAudioEngine();
+                    st.textContent = '🌙 İyi uykular sevgilim, sabaha kadar yanındayım ♥';
+                }
+            }, 1000);
+        }
+
+        const storiesContent = {
+            masal: `
+                <div class="space-y-4 font-serif text-lg sm:text-xl text-[#FBF4EB] leading-relaxed">
+                    <h4 class="font-display italic text-2xl text-[#F3CE93]">Mum Işığındaki Gece Nöbeti</h4>
+                    <p>Kasım ayının serin bir pazar gecesinde, dışarıda rüzgar yavaşça eserken senin odanın içi kehribar rengi mum ışığı ve sıcacık bir şefkatle doluydu. Bedeninin biraz dinlenmeye, gevşemeye ve sessizliğe ihtiyaç duyduğu bu saatte yalnız değildin.</p>
+                    <p>Tam başucunda, senin her nefes alışını dünyanın en güzel noktürnü gibi dinleyen sevgilin oturuyordu. Üzerindeki yumuşak kaşmir battaniyeyi omuzlarına kadar çekti, üşüyen ellerini kendi sıcak avuçlarının arasına aldı ve başparmağıyla elinin üstünü yavaşça okşamaya başladı.</p>
+                    <p>Başucundaki fincandan yükselen papatya ve vanilya buharı odanın havasını yumuşatırken, ne bir şey açıklamak zorundaydın ne de güçlü görünmek. Bütün ağırlığın, bütün sızın ve halsizliğin onun avuçlarının sıcaklığında yavaşça eriyip geceye karıştı.</p>
+                    <p>Sen uykunun en derin, en huzurlu kıyısına doğru süzülürken o senin elini bir saniye bile bırakmadı. Çünkü bu gece başucunda tuttuğu bu sevgi nöbeti, sabah saatler <strong>11:00</strong>'i gösterdiğinde en gerçek, en sıkı sarılmaya dönüşecekti.</p>
+                </div>
+            `,
+            siir1: `
+                <div class="space-y-5 font-serif text-xl text-[#FBF4EB] leading-relaxed text-center py-4">
+                    <h4 class="font-display italic text-2xl text-[#F3CE93]">Başucundaki Nefes</h4>
+                    <p class="italic">Yorulmuş bugün o zarif omuzların,<br>Hiç konuşma, tek bir kelime bile yormasın seni.<br>Avuçlarımda erisin içindeki bütün o kış,<br>Göğsümde dinlendir yorgun nefesini.</p>
+                    <p class="italic text-[#E5987F]">Üşüyorsa parmakların, ellerim senindir,<br>Kapanıyorsa gözlerin, omzum yastığın.<br>Bu gece sabaha kadar başucundayım,<br>Benim yanımda diner bütün kırgınlığın.</p>
+                </div>
+            `,
+            siir2: `
+                <div class="space-y-5 font-serif text-xl text-[#FBF4EB] leading-relaxed text-center py-4">
+                    <h4 class="font-display italic text-2xl text-[#F3CE93]">Dokuz Kasım Saat On Bir</h4>
+                    <p class="italic">Gece boyu başucunda bekleyen o sıcaklık,<br>Sabah saat on birde kollarıma dönüşüyor.<br>En yorgun, en uykulu, en doğal halinle gel,<br>Senin her bakışında kalbim yeniden çiçek açıyor.</p>
+                    <p class="italic text-[#E5987F]">Ne bir soru var dudaklarımda, ne bir beklenti,<br>Sadece çekip seni hırkamın huzuruna,<br>Saçlarının kokusunu içime çekiyorum sessizce,<br>İyi uykular benim canımın içi, en güzel sığınağım. ♥</p>
+                </div>
+            `
+        };
+
+        function switchStoryTab(key, btnEl) {
+            document.querySelectorAll('.story-tab-btn').forEach(b => {
+                b.className = 'story-tab-btn px-4 py-2 rounded-full text-xs font-medium bg-white/5 text-[#E4D0C8] hover:bg-white/10 transition';
+            });
+            btnEl.className = 'story-tab-btn px-4 py-2 rounded-full text-xs font-semibold bg-[#F3CE93] text-[#120B16] transition';
+            const box = document.getElementById('storyReaderBox');
+            box.innerHTML = storiesContent[key];
+            box.scrollTop = 0;
+        }
+
+        let autoScrollTimer = null;
+        function toggleStoryAutoScroll() {
+            const box = document.getElementById('storyReaderBox');
+            const txt = document.getElementById('autoScrollBtnText');
+            if (autoScrollTimer) {
+                clearInterval(autoScrollTimer);
+                autoScrollTimer = null;
+                txt.textContent = 'Yavaşça Otomatik Kaydır';
+            } else {
+                txt.textContent = 'Kaydırmayı Durdur';
+                autoScrollTimer = setInterval(() => {
+                    box.scrollTop += 1;
+                    if (box.scrollTop + box.clientHeight >= box.scrollHeight - 2) {
+                        clearInterval(autoScrollTimer);
+                        autoScrollTimer = null;
+                        txt.textContent = 'Yavaşça Otomatik Kaydır';
+                    }
+                }, 55);
+            }
+        }
+
+        /* Background Sanctuary Sky Canvas */
+        const bgCanvas = document.getElementById('sanctuarySkyCanvas');
+        const bgCtx = bgCanvas.getContext('2d');
+        let bgEmbers = [];
+        function initBgSky() {
+            bgCanvas.width = window.innerWidth;
+            bgCanvas.height = window.innerHeight;
+            bgEmbers = [];
+            for (let i = 0; i < 32; i++) {
+                bgEmbers.push({
+                    x: Math.random() * bgCanvas.width,
+                    y: Math.random() * bgCanvas.height,
+                    r: Math.random() * 2.4 + 0.8,
+                    vx: (Math.random() - 0.5) * 0.25,
+                    vy: -Math.random() * 0.3 - 0.08,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+        }
+        function drawBgSky() {
+            bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+            for (let e of bgEmbers) {
+                e.x += e.vx;
+                e.y += e.vy;
+                e.phase += 0.025;
+                if (e.y < -10) e.y = bgCanvas.height + 10;
+                if (e.x < -10) e.x = bgCanvas.width + 10;
+                if (e.x > bgCanvas.width + 10) e.x = -10;
+                const alpha = 0.25 + 0.2 * Math.sin(e.phase);
+                const g = bgCtx.createRadialGradient(e.x, e.y, 0, e.x, e.y, e.r * 4);
+                g.addColorStop(0, `rgba(243, 206, 147, ${alpha})`);
+                g.addColorStop(1, 'rgba(243, 206, 147, 0)');
+                bgCtx.fillStyle = g;
+                bgCtx.beginPath();
+                bgCtx.arc(e.x, e.y, e.r * 4, 0, Math.PI * 2);
+                bgCtx.fill();
+            }
+            requestAnimationFrame(drawBgSky);
+        }
+        window.addEventListener('resize', initBgSky);
+
+        /* Initialize Everything */
+        window.onload = function () {
+            initBgSky();
+            drawBgSky();
+            initWindowCanvas();
+            drawWindowScene();
+            drawAudioSpectrum();
+            resizeSilkCanvas();
+            renderSilkCanvas();
+            renderConservatory();
+            renderEnvelopes();
+            updateJarDisplay();
+            renderCandles();
+            document.getElementById('storyReaderBox').innerHTML = storiesContent.masal;
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>
